@@ -2,11 +2,11 @@ export const personalInfo = {
   name: "Mohan Shankar G",
   shortName: "Mohan Shankar",
   title: "Full Stack Web Developer & AI Engineer",
-  tagline: "Building scalable enterprise web platforms, robust RESTful APIs, and high-performance computer vision pipelines.",
-  location: "Nidadavole, Andhra Pradesh, India",
+  tagline: "Building scalable enterprise web platforms, robust RESTful APIs, and high-performance computer vision & embedded pipelines.",
+  location: "Nidadavole, East Godavari District, Andhra Pradesh, India",
   phone: "+91 8985338792",
   email: "mohan.shankar62892@gmail.com",
-  linkedin: "https://linkedin.com/in/mohan-shankar-1598432b",
+  linkedin: "https://linkedin.com/in/mohan-shankar-1598432b7",
   github: "https://github.com/mohanShankarG",
   resumePdfUrl: "./Mohan_Shankar_Resume.pdf",
   availability: "Available for Full-time Roles & High-Impact Opportunities",
@@ -14,18 +14,19 @@ export const personalInfo = {
     "Full Stack Developer",
     "React.js Developer",
     "Node.js Backend Developer",
-    "AI / Computer Vision Engineer"
+    "AI / Computer Vision Engineer",
+    "Embedded / IoT Solutions Engineer"
   ],
   stats: [
     { label: "Years of Experience", value: "3+", icon: "Clock" },
     { label: "Production Projects", value: "5+", icon: "FolderGit2" },
-    { label: "Tech Stack Tools", value: "20+", icon: "Cpu" },
+    { label: "Tech Stack Tools", value: "25+", icon: "Cpu" },
     { label: "Government Modules Built", value: "6+", icon: "ShieldCheck" }
   ]
 };
 
 export const professionalSummary = `
-Full Stack Web Developer with 3+ years of experience building responsive web applications, RESTful APIs, dashboards, business workflows, and data-driven systems using React.js, Node.js, Express.js, MongoDB, and PostgreSQL. Experienced in authentication, RBAC, API integration, scheduled Cron jobs, database workflows, deployment, and production issue resolution. Also specialized in AI/ML integration using Python, PyTorch, YOLO, and computer vision for real-world road-safety and video-processing applications.
+Full Stack Developer with 3+ years of experience in developing scalable web applications, AI-powered computer vision systems, and embedded solutions. Proficient in React.js, Node.js, Express.js, MongoDB, PostgreSQL, Python, and RESTful APIs. Experienced in government, enterprise, and AI-based projects with strong problem-solving and collaboration skills.
 `;
 
 export const skillsData = {
@@ -35,6 +36,7 @@ export const skillsData = {
     description: "Modern, responsive, user-centric web applications and audit dashboards.",
     skills: [
       { name: "React.js", level: "Expert", tags: ["Hooks", "Router", "State", "Context"] },
+      { name: "Angular.js", level: "Intermediate", tags: ["Components", "Directives", "SPAs"] },
       { name: "JavaScript (ES6+)", level: "Expert", tags: ["Async/Await", "DOM", "Modular"] },
       { name: "Material UI & Tailwind CSS", level: "Advanced", tags: ["Theming", "Responsive", "Glassmorphism"] },
       { name: "Vite & Build Tools", level: "Advanced", tags: ["Bundling", "HMR", "Performance"] },
@@ -52,6 +54,7 @@ export const skillsData = {
       { name: "RESTful API Architecture", level: "Expert", tags: ["API Design", "Versioning", "Clean Arch"] },
       { name: "JWT & RBAC Security", level: "Advanced", tags: ["Role Hierarchy", "Tokens", "Auth Guards"] },
       { name: "Cron Jobs & Schedulers", level: "Advanced", tags: ["Daily Archival", "Rankings", "Workers"] },
+      { name: "Serverless Functions", level: "Advanced", tags: ["Event-Driven", "Cloud Functions"] },
       { name: "SAP ABAP Integration", level: "Familiar", tags: ["B2B Tickets", "Order Sync"] }
     ]
   },
@@ -81,59 +84,87 @@ export const skillsData = {
     ]
   },
   devopsAndTools: {
-    title: "DevOps & Deployment",
+    title: "Cloud, DevOps & Tools",
     icon: "Wrench",
     description: "Modern containerization, cloud deployment, asset optimization, and version control.",
     skills: [
-      { name: "Docker", level: "Intermediate", tags: ["Containers", "Images", "Composes"] },
       { name: "Git & GitHub", level: "Expert", tags: ["Branching", "Code Reviews", "CI/CD"] },
-      { name: "Postman", level: "Expert", tags: ["API Testing", "Environments", "Docs"] },
       { name: "Vercel & Render", level: "Advanced", tags: ["Automated Deployments", "Serverless"] },
-      { name: "Cloudinary / Multer / Sharp", level: "Advanced", tags: ["Media Pipelines", "Compression"] }
+      { name: "Postman & API Testing", level: "Expert", tags: ["Test Collections", "Environments", "Docs"] },
+      { name: "Cloudinary / Multer / Sharp", level: "Advanced", tags: ["Media Pipelines", "Compression"] },
+      { name: "Docker", level: "Intermediate", tags: ["Containers", "Images", "Composes"] }
     ]
   },
   embedded: {
     title: "Embedded & Hardware",
     icon: "Cpu",
-    description: "Foundational roots in microcontroller programming, sensors, and robotics automation.",
+    description: "Hardware-software integration, microcontroller boards, IoT sensors, and robotics automation.",
     skills: [
-      { name: "C & C++", level: "Advanced", tags: ["Memory Management", "Algorithms"] },
-      { name: "Embedded C", level: "Advanced", tags: ["Microcontrollers", "Registers"] },
-      { name: "Arduino & Microcontrollers", level: "Advanced", tags: ["Firmware", "Motor Control"] },
-      { name: "Hardware & Sensor Integration", level: "Advanced", tags: ["Ultrasonic", "Infrared", "Robotics"] }
+      { name: "Raspberry Pi 4 & Raspberry Pi 5", level: "Expert", tags: ["Linux SBC", "GPIO", "Vision Edge", "Python"] },
+      { name: "ESP32 & ESP8266 Boards", level: "Expert", tags: ["WiFi/BLE", "IoT Nodes", "Firmware", "MQTT"] },
+      { name: "Arduino & Microcontroller Boards", level: "Advanced", tags: ["Firmware", "PWM Motor Control", "Timers"] },
+      { name: "Embedded C & C/C++", level: "Advanced", tags: ["Low-Level", "Memory Optimization", "Registers"] },
+      { name: "Sensor Integration & Hardware Automation", level: "Advanced", tags: ["Ultrasonic", "IR Sensors", "Relays", "Actuators"] },
+      { name: "Robotics & Embedded System Design", level: "Advanced", tags: ["Autonomous Navigation", "Obstacle Avoidance"] }
     ]
   }
 };
 
+export const softSkills = [
+  "Team Collaboration",
+  "Communication",
+  "Leadership",
+  "Time Management",
+  "Working Under Pressure",
+  "Quick Learning",
+  "Problem Solving",
+  "System Architecture"
+];
+
+export const personalInterests = [
+  "Development & Coding",
+  "Learning New Technologies",
+  "Artificial Intelligence",
+  "Computer Vision",
+  "Robotics & IoT",
+  "Movies",
+  "Basketball",
+  "Cricket",
+  "Hockey",
+  "Chess"
+];
+
 export const experienceData = [
   {
-    role: "Full Stack Developer / AI Engineer",
+    role: "Full Stack Developer",
     company: "Satra Service and Solutions Pvt. Ltd.",
     location: "Ahmedabad, Gujarat / Remote",
     period: "Dec 2024 -- Present",
     type: "Full-Time",
     highlights: [
-      "Developed and maintained mission-critical modules for GujMarg (Gujarat Government Road Safety and Complaint Management System) using React.js, Node.js, and Express.js.",
-      "Architected intelligent complaint workflows featuring automated officer assignment based on jurisdiction, hierarchical escalation matrix, role-based access control (RBAC), and high-performance server-side sorting/filtering/pagination.",
-      "Engineered comprehensive React dashboards including Web Audit and Citizen Audit modules for real-time monitoring, analytics, and transparent governmental reporting.",
-      "Implemented scheduled Cron background workers for automated daily officer ranking calculation and high-volume historic record archival.",
-      "Integrated end-to-end AI/ML workflows for road-survey imagery and video processing using Python, PyTorch, YOLOv11, and computer vision pipelines.",
-      "Spearheaded Git/GitHub collaborative workflows, active debugging, code reviews, and production hotfix resolutions."
+      "Working on the GujMarg Project, a Gujarat Government initiative for road safety and complaint management.",
+      "Developed complaint management modules, automated officer assignment, and hierarchical escalation tracking up to the CMO (Chief Minister's Office).",
+      "Contributed to both backend development using Node.js and Express.js and frontend development using React.js.",
+      "Worked on AI/ML-based Vehicle Detection systems using the BoT-SORT algorithm for object tracking.",
+      "Performed data annotation using LabelImg and Label Studio for deep learning models.",
+      "Built vehicle detection and tracking pipelines using Python and computer vision techniques.",
+      "Contributed to traffic analysis systems for identifying high-density roads across India.",
+      "Maintained codebase and collaborative version control using GitHub."
     ],
-    tech: ["React.js", "Node.js", "Express.js", "PostgreSQL", "Python", "YOLOv11", "PyTorch", "Redis", "Cron Jobs", "RBAC"]
+    tech: ["React.js", "Node.js", "Express.js", "PostgreSQL", "Python", "YOLOv11", "BoT-SORT", "Redis", "Cron Jobs", "RBAC"]
   },
   {
-    role: "Backend Developer Intern",
+    role: "Backend Developer",
     company: "Synozon Technology",
     location: "India",
     period: "Aug 2023 -- Oct 2024",
     type: "Internship",
     highlights: [
-      "Engineered core CRM modules utilizing React.js, Node.js, Express.js, and MongoDB.",
-      "Designed and implemented secure REST APIs for customer profiles, order fulfillment, automated alerts, and JWT authentication flows.",
-      "Created fluid, responsive React frontend interfaces and connected them seamlessly with backend service endpoints.",
-      "Contributed to SAP ABAP B2B ticket synchronization mechanisms and real-time order-tracking workflows.",
-      "Optimized backend data processing routines and streamlined application response latencies."
+      "Developed full-stack CRM modules for customer interaction tracking and relationship management using React.js, Node.js, and MongoDB.",
+      "Created secure backend REST APIs using Node.js and Express.js for orders, alerts, authentication, and customer profiles.",
+      "Integrated SAP ABAP for enterprise-level B2B ticket synchronization and business process automation.",
+      "Implemented responsive React.js user interfaces for seamless CRM operations.",
+      "Designed backend architecture for efficient data handling, synchronization, and customer profile management."
     ],
     tech: ["Node.js", "Express.js", "React.js", "MongoDB", "REST APIs", "JWT", "SAP ABAP"]
   },
@@ -144,11 +175,12 @@ export const experienceData = [
     period: "Dec 2021 -- Mar 2023",
     type: "Full-Time",
     highlights: [
-      "Built embedded software and automated robotics solutions utilizing C, C++, Embedded C, Python, and Arduino architectures.",
-      "Conducted extensive multi-sensor integration, PWM motor speed control, hardware automation routines, and rigorous circuit testing.",
-      "Led development of notable prototypes including the Blind Man Wheelchair (obstacle avoidance & autonomous navigation), Auto Robo Assistant, and an Electric Vehicle (EV) smart telemetry prototype."
+      "Worked on Electric Vehicle (EV) prototype design integrating embedded systems, AI, and battery telemetry.",
+      "Developed assistive robotics projects including the Blind Man Wheelchair (obstacle detection & navigation) and Auto Robo Assistant.",
+      "Worked with Raspberry Pi, ESP32, ESP8266, Arduino, Embedded C, Python, C++, AI/ML, and sensor systems.",
+      "Collaborated on hardware integration, sensor systems (ultrasonic, IR), motor drivers, and automated safety mechanisms."
     ],
-    tech: ["C/C++", "Embedded C", "Python", "Arduino", "Sensors", "Robotics", "Hardware Automation"]
+    tech: ["Raspberry Pi 4/5", "ESP32", "ESP8266", "Arduino", "Embedded C", "C/C++", "Python", "Sensors", "Robotics"]
   }
 ];
 
@@ -156,20 +188,20 @@ export const projectsData = [
   {
     id: "gujmarg",
     title: "GujMarg -- Road Safety & Complaint Portal",
-    subtitle: "Enterprise Government Road Safety & Complaint Management Platform",
+    subtitle: "Gujarat Government Initiative for Road Safety & Complaint Management",
     category: "Full Stack Web",
     badge: "Government Enterprise",
     period: "2024 -- Present",
-    client: "Gujarat State Government / Satra Solutions",
+    client: "Gujarat Government / Satra Solutions",
     description:
-      "A high-impact citizen complaint and road infrastructure safety platform handling civic issues across Gujarat. Features automated department dispatching, multi-level escalation timers, audit logs, and performance ranking.",
+      "A high-impact citizen complaint management and road safety platform handling civic issues across Gujarat. Features automated officer assignment, hierarchical escalation tracking directly up to the CMO (Chief Minister's Office), Web Audit, and Citizen Audit modules.",
     features: [
       "Automated officer assignment driven by jurisdictional boundaries & category taxonomy",
-      "Hierarchical escalation workflows with automated breach notifications",
+      "Hierarchical escalation tracking up to the CMO (Chief Minister's Office)",
       "Role-Based Access Control (RBAC) with granular admin, supervisor, and field-officer scopes",
       "High-throughput server-side pagination, multi-column sorting, and dynamic status filters",
-      "Web Audit & Citizen Audit modules delivering public accountability and transparency",
-      "Nightly scheduled Cron jobs calculating officer performance indices and automated data archival"
+      "Web Audit and Citizen Audit views for real-time monitoring and reporting",
+      "Nightly scheduled Cron jobs calculating officer performance ranking indices and automated record archival"
     ],
     architecture: {
       client: "React.js, Material UI, Vite, Axios",
@@ -179,9 +211,9 @@ export const projectsData = [
     },
     tech: ["React.js", "Node.js", "Express.js", "PostgreSQL", "Cron Jobs", "RBAC", "Material UI"],
     metrics: [
+      { label: "Escalation", val: "Up to CMO" },
       { label: "Complaint Routing", val: "100% Automated" },
-      { label: "Response Visibility", val: "Real-time" },
-      { label: "Escalation Levels", val: "Multi-tier" }
+      { label: "Audits", val: "Citizen & Web" }
     ],
     color: "from-blue-600 to-cyan-600"
   },
@@ -196,15 +228,16 @@ export const projectsData = [
     description:
       "Large-scale intelligent road-survey image and video detection system leveraging YOLOv11 deep learning models to identify, catalog, and locate highway safety assets (guard rails, signage, kilometer stones, road furniture).",
     features: [
+      "AI-based road asset detection and classification using YOLOv11",
       "Batch inference pipeline handling high-resolution survey video feeds and dashcam imagery",
       "Asynchronous job queue processing powered by Redis and background worker threads",
       "Chainage-based spatial deduplication algorithm to prevent redundant asset tallies across consecutive video frames",
       "Automated inspection report generation with georeferenced bounding boxes and confidence metrics",
-      "Database integration using Prisma ORM with PostgreSQL for GIS spatial indexing"
+      "Backend services built using Node.js, Express.js, PostgreSQL, and Prisma ORM"
     ],
     architecture: {
       model: "YOLOv11 custom-trained on road furniture asset classes",
-      backend: "Python, FastAPI/Node.js, Prisma ORM",
+      backend: "Python, Node.js, Express.js, Prisma ORM",
       queue: "Redis Task Queue with concurrent workers",
       database: "PostgreSQL with spatial chainage mapping"
     },
@@ -219,90 +252,123 @@ export const projectsData = [
   {
     id: "nirupaa",
     title: "Nirupaa -- Fashion E-Commerce Platform",
-    subtitle: "Full-Stack Retail Application with Intelligent Media Optimization",
+    subtitle: "Full-Stack Retail Application for Men's and Women's Clothing",
     category: "Full Stack Web",
     badge: "Full Stack MERN",
     period: "2024 -- Present",
     client: "E-Commerce / Commercial",
     description:
-      "A complete e-commerce solution offering seamless catalog browsing, dynamic price filtering, cart state management, secure checkout flows, and a dedicated admin portal for product and order lifecycle management.",
+      "A scalable fashion e-commerce platform for men's and women's clothing. Offers seamless catalog browsing, dynamic price filtering, cart state management, secure checkout flows, and a dedicated admin portal for product and order lifecycle management.",
     features: [
-      "Modern React storefront with instant search, multi-attribute filtering, and cart drawer",
-      "Robust RESTful API architecture built on Node.js and Express.js",
+      "Modern responsive React storefront with product browsing, filtering, cart, and checkout",
+      "Robust RESTful API architecture built on Node.js and Express.js with MongoDB",
       "Automated media optimization pipeline using Multer, Sharp (dynamic image resizing), and Cloudinary CDN storage",
-      "JWT-based user authentication and protected admin dashboards for inventory oversight",
-      "Production deployment architecture running on Vercel (frontend) and Render (backend)"
+      "Secure JWT-based authentication and protected admin dashboards for inventory oversight",
+      "Production deployment architecture running frontend and backend on Vercel"
     ],
     architecture: {
       frontend: "React.js, Tailwind CSS, Responsive Cart State",
       backend: "Node.js, Express.js, REST APIs",
       database: "MongoDB Atlas",
       media: "Multer, Sharp compression, Cloudinary Storage CDN",
-      deploy: "Vercel & Render"
+      deploy: "Vercel"
     },
-    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Cloudinary", "Multer", "Sharp", "Vercel", "Render"],
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Cloudinary", "Multer", "Sharp", "Vercel"],
     metrics: [
       { label: "Image Optimization", val: "Sharp & Cloudinary" },
-      { label: "Deployment", val: "Vercel + Render" },
+      { label: "Deployment", val: "Vercel" },
       { label: "Architecture", val: "MERN Stack" }
     ],
     color: "from-purple-600 to-pink-600"
   },
   {
     id: "vehicle-ai",
-    title: "Vehicle Detection & Multi-Object Tracking AI",
+    title: "Vehicle Detection using AI & ML",
     subtitle: "Real-Time Traffic Surveillance & Trajectory Analytics",
     category: "AI & Computer Vision",
     badge: "Deep Learning",
     period: "2024 -- Present",
-    client: "Traffic Analytics / R&D",
+    client: "Traffic Analytics / Large-Scale Survey",
     description:
-      "High-accuracy computer vision pipeline designed for automated vehicle identification, class tagging (cars, trucks, bikes, buses), and continuous trajectory tracking across highway camera streams.",
+      "High-accuracy computer vision pipeline designed for automated vehicle identification and continuous trajectory tracking across highway camera streams, contributing to traffic analysis for identifying high-density roads across India.",
     features: [
-      "Integration of YOLO deep neural networks with BoT-SORT / ByteTrack tracking algorithms",
-      "Custom dataset curation and bounding-box annotation using LabelImg and Label Studio",
-      "OpenCV video stream decoding, frame rate normalization, and zone-crossing analytics",
-      "Resilient tracking under challenging real-world occlusion and varied lighting conditions"
+      "Developed an AI-based vehicle detection and tracking system using the BoT-SORT algorithm",
+      "Performed data annotation using LabelImg and Label Studio",
+      "Built object detection and tracking pipelines using Python and OpenCV",
+      "Implemented traffic analysis for identifying high-density roads across India",
+      "Designed the system to support large-scale traffic survey applications"
     ],
     architecture: {
-      detection: "PyTorch & YOLO",
-      tracking: "BoT-SORT / ByteTrack multi-object tracker",
+      detection: "Python, PyTorch & YOLO",
+      tracking: "BoT-SORT multi-object tracking algorithm",
       processing: "OpenCV frame manipulation pipeline",
       annotation: "Label Studio & LabelImg"
     },
     tech: ["Python", "PyTorch", "YOLO", "BoT-SORT", "OpenCV", "Label Studio", "LabelImg"],
     metrics: [
       { label: "Tracker", val: "BoT-SORT" },
-      { label: "Model Framework", val: "PyTorch" },
-      { label: "Annotation Tool", val: "Label Studio" }
+      { label: "Traffic Scope", val: "Pan-India Survey" },
+      { label: "Annotation", val: "Label Studio" }
     ],
     color: "from-amber-600 to-orange-600"
   },
   {
+    id: "crm-system",
+    title: "CRM -- Customer Relationship Management",
+    subtitle: "Full-Stack Enterprise CRM with SAP ABAP Integration",
+    category: "Full Stack Web",
+    badge: "Enterprise CRM",
+    period: "2023 -- 2024",
+    client: "Synozon Technology",
+    description:
+      "Full-stack CRM platform for customer interaction tracking, relationship management, and enterprise-level SAP ABAP B2B ticket synchronization.",
+    features: [
+      "Developed full-stack CRM platform using React.js, Node.js, and MongoDB",
+      "Created REST APIs for orders, alerts, authentication, and customer profiles",
+      "Integrated SAP ABAP for enterprise-level order tracking and business process automation",
+      "Implemented secure authentication and notification modules",
+      "Designed backend architecture for efficient data handling and synchronization"
+    ],
+    architecture: {
+      frontend: "React.js, Responsive UI",
+      backend: "Node.js, Express.js",
+      integration: "SAP ABAP B2B Synchronization",
+      database: "MongoDB"
+    },
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "SAP ABAP", "REST APIs", "JWT"],
+    metrics: [
+      { label: "Integration", val: "SAP ABAP" },
+      { label: "Database", val: "MongoDB" },
+      { label: "Architecture", val: "RESTful" }
+    ],
+    color: "from-sky-600 to-indigo-600"
+  },
+  {
     id: "embedded-suite",
-    title: "Embedded Robotics & Assistive Prototypes",
-    subtitle: "Hardware-Software Integration & Assistive Mobility Systems",
+    title: "Assistive Robotics & Embedded IoT Systems",
+    subtitle: "Raspberry Pi, ESP32/ESP8266, Arduino & AI Integration",
     category: "Embedded / IoT",
     badge: "Hardware & Robotics",
     period: "2021 -- 2023",
     client: "Pantech R&D / Innovation Showcase",
     description:
-      "A suite of autonomous robotic prototypes and assistive mobility systems merging embedded C/C++ microcontrollers, ultrasonic/IR sensor arrays, and motor driver automation.",
+      "A suite of autonomous robotic prototypes and assistive mobility systems integrating Raspberry Pi 4/5, ESP32, ESP8266, Arduino boards, sensor arrays, and motor driver automation.",
     features: [
-      "Blind Man Wheelchair: Ultrasonic obstacle detection, auditory feedback alerts, and automated brake-triggering",
-      "Auto Robo Assistant: Autonomous navigation, programmed waypoint routines, and sensor-driven collision avoidance",
-      "EV Vehicle Prototype: Microcontroller-based battery monitoring, motor PWM acceleration control, and telemetry logic"
+      "Blind Man Wheelchair: AI-enabled wheelchair to assist visually impaired users through obstacle detection and navigation, ultrasonic & IR sensors, and automatic stopping",
+      "Auto Robo Assistant: Autonomous robot using embedded sensors and AI techniques, obstacle avoidance, auto-stop, and collision prevention",
+      "EV Vehicle Prototype: Design integrating embedded systems and AI, microcontroller battery monitoring, and PWM motor control",
+      "Hardware Boards: Raspberry Pi 4 & 5, ESP32, ESP8266, Arduino development boards with Embedded C and Python"
     ],
     architecture: {
-      firmware: "C, C++, Embedded C",
-      controller: "Arduino & Microcontrollers",
-      hardware: "Sensor Arrays, PWM Motor Drivers, Power Relays"
+      hardware: "Raspberry Pi 4/5, ESP32, ESP8266, Arduino Uno/Mega",
+      firmware: "Embedded C, C++, Python",
+      sensors: "Ultrasonic, IR, Gyro, Relays, Motor Drivers"
     },
-    tech: ["C", "C++", "Embedded C", "Arduino", "Sensors", "Motor Drivers", "Robotics"],
+    tech: ["Raspberry Pi 4/5", "ESP32", "ESP8266", "Arduino", "Embedded C", "C/C++", "Python", "Sensors", "Robotics"],
     metrics: [
-      { label: "Prototypes", val: "3 Finished Systems" },
-      { label: "Domain", val: "Assistive Tech & EV" },
-      { label: "Core Lang", val: "Embedded C/C++" }
+      { label: "Boards", val: "RPi 4/5, ESP32/8266" },
+      { label: "Key Projects", val: "Wheelchair & Robo" },
+      { label: "Core Lang", val: "Embedded C / Python" }
     ],
     color: "from-teal-600 to-indigo-600"
   }
@@ -311,8 +377,8 @@ export const projectsData = [
 export const systemPipelines = [
   {
     id: "gujmarg-flow",
-    title: "GujMarg Complaint & Escalation Pipeline",
-    description: "How citizen complaints flow from submission to automated officer dispatch, audit, and ranking.",
+    title: "GujMarg Complaint & CMO Escalation Pipeline",
+    description: "How citizen complaints flow from submission to automated officer dispatch, audit, and escalation up to the CMO.",
     steps: [
       {
         step: "01",
@@ -326,8 +392,8 @@ export const systemPipelines = [
       },
       {
         step: "03",
-        title: "SLA Escalation Timer",
-        desc: "Automated cron daemon monitors response windows; auto-escalates to higher authorities if breached."
+        title: "SLA Escalation (Up to CMO)",
+        desc: "Automated cron daemon monitors response windows; auto-escalates unresolved issues hierarchically all the way to the CMO."
       },
       {
         step: "04",
@@ -377,11 +443,11 @@ export const systemPipelines = [
 
 export const educationData = [
   {
-    degree: "B.Tech in Computer Science and Engineering",
+    degree: "Bachelor of Technology in Computer Science and Engineering",
     institution: "Andhra University",
     location: "Visakhapatnam, Andhra Pradesh",
     period: "2015 -- 2019",
-    grade: "First Class",
+    grade: "Passed Out in 2019",
     details: "Comprehensive coursework in Data Structures, Algorithms, Database Systems, Computer Networks, and Software Engineering."
   },
   {
@@ -389,7 +455,7 @@ export const educationData = [
     institution: "Narayana Junior College",
     location: "Nidadavole, Andhra Pradesh",
     period: "2013 -- 2015",
-    grade: "Distinction",
+    grade: "Passed Out in 2015",
     details: "Foundational mathematics, physics, analytical reasoning, and competitive aptitude."
   }
 ];
@@ -398,19 +464,19 @@ export const achievementsData = [
   {
     title: "Best Trainee Certificate",
     issuer: "Karpagam Engineering College, Coimbatore",
-    description: "Honored with the Best Trainee award for outstanding performance in technical workshops and hands-on software training.",
+    description: "Awarded Best Trainee Certificate from Karpagam Engineering College, Coimbatore.",
     icon: "Award"
   },
   {
-    title: "Robotics & Project Presentations",
-    issuer: "Academic & Tech Competitions",
-    description: "Active participant and presenter in collegiate robotics design exhibitions, embedded prototype showcases, and tech symposia.",
+    title: "Robotics Programs & Project Presentations",
+    issuer: "Karpagam Engineering College, Coimbatore",
+    description: "Participated in Robotics programs and project presentations at Karpagam Engineering College.",
     icon: "Cpu"
   },
   {
-    title: "1st Place -- Cricket Championship",
-    issuer: "NBA & Nidadavole Cricket Association",
-    description: "Secured first place in regional championship tournament demonstrating strategic leadership, team spirit, and high-pressure execution.",
+    title: "1st Place -- Basketball & Cricket Championship",
+    issuer: "NBA (Nidadavole Basketball Assoc) & (Nidadavole Cricket Assoc)",
+    description: "Won 1st place in NBA (Nidadavole Basketball Assoc) and Nidadavole Cricket Assoc.",
     icon: "Trophy"
   }
 ];

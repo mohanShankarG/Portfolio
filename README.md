@@ -80,3 +80,4 @@ The production assets will be generated in `dist/`.
 ## 📄 Included Assets
 - `resume_source.tex`: Original LaTeX source of Mohan Shankar's resume.
 - `public/Mohan_Shankar_Resume.pdf`: Resume PDF for direct download.
+

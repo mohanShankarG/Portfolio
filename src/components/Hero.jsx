@@ -265,6 +265,7 @@ export default function Hero({ onOpenResume }) {
             {[
               "React.js", "Node.js", "Express.js", "PostgreSQL", "MongoDB", 
               "Python", "PyTorch", "YOLOv11", "OpenCV", "Redis", 
+              "Raspberry Pi 4/5", "ESP32 / ESP8266", "Arduino",
               "Prisma ORM", "Docker", "Git/GitHub", "Material UI", "Vite"
             ].map((tech) => (
               <span
@@ -281,3 +282,4 @@ export default function Hero({ onOpenResume }) {
     </section>
   );
 }
+

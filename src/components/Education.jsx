@@ -123,3 +123,4 @@ export default function Education() {
     </section>
   );
 }
+

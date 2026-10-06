@@ -10,9 +10,21 @@ import {
   Linkedin, 
   Github, 
   FileText,
-  CheckCircle2
+  CheckCircle2,
+  Heart,
+  Users
 } from 'lucide-react';
-import { personalInfo, professionalSummary, experienceData, projectsData, educationData, achievementsData, skillsData } from '../data/portfolioData';
+import { 
+  personalInfo, 
+  professionalSummary, 
+  experienceData, 
+  projectsData, 
+  educationData, 
+  achievementsData, 
+  skillsData,
+  softSkills,
+  personalInterests
+} from '../data/portfolioData';
 
 export default function ResumeModal({ isOpen, onClose }) {
   useEffect(() => {
@@ -48,7 +60,7 @@ export default function ResumeModal({ isOpen, onClose }) {
                 Curriculum Vitae -- {personalInfo.name}
               </h3>
               <p className="text-[11px] text-slate-400 font-mono">
-                Full Stack Web Developer & AI Engineer
+                Full Stack Developer & AI Engineer
               </p>
             </div>
           </div>
@@ -67,7 +79,7 @@ export default function ResumeModal({ isOpen, onClose }) {
             {/* Print button */}
             <button
               onClick={() => window.print()}
-              className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold text-slate-300 bg-slate-800 hover:bg-slate-700 transition-colors"
+              className="hidden sm:flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-300 bg-slate-800 hover:bg-slate-700 transition-colors"
             >
               <Printer size={14} />
               <span>Print</span>
@@ -101,13 +113,17 @@ export default function ResumeModal({ isOpen, onClose }) {
               <div>{personalInfo.location}</div>
               <div>{personalInfo.phone}</div>
               <div className="text-cyan-300">{personalInfo.email}</div>
+              <div className="text-slate-400">
+                <a href={personalInfo.linkedin} target="_blank" rel="noreferrer" className="hover:text-cyan-400 underline mr-2">LinkedIn</a>
+                <a href={personalInfo.github} target="_blank" rel="noreferrer" className="hover:text-cyan-400 underline">GitHub</a>
+              </div>
             </div>
           </div>
 
-          {/* Professional Summary */}
+          {/* Profile Summary */}
           <div className="space-y-2">
             <h2 className="text-xs font-mono font-bold uppercase tracking-widest text-cyan-400 border-b border-slate-800 pb-1">
-              Professional Summary
+              Profile
             </h2>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
               {professionalSummary}
@@ -117,7 +133,7 @@ export default function ResumeModal({ isOpen, onClose }) {
           {/* Professional Experience */}
           <div className="space-y-6">
             <h2 className="text-xs font-mono font-bold uppercase tracking-widest text-cyan-400 border-b border-slate-800 pb-1">
-              Professional Experience
+              Experience
             </h2>
             <div className="space-y-6">
               {experienceData.map((exp, idx) => (
@@ -125,7 +141,7 @@ export default function ResumeModal({ isOpen, onClose }) {
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between text-xs sm:text-sm">
                     <div>
                       <span className="font-bold text-white">{exp.role}</span>
-                      <span className="text-slate-400"> -- {exp.company}</span>
+                      <span className="text-slate-400"> — {exp.company}</span>
                     </div>
                     <span className="font-mono text-cyan-400 text-xs font-semibold">{exp.period}</span>
                   </div>
@@ -142,20 +158,20 @@ export default function ResumeModal({ isOpen, onClose }) {
           {/* Selected Projects */}
           <div className="space-y-4">
             <h2 className="text-xs font-mono font-bold uppercase tracking-widest text-cyan-400 border-b border-slate-800 pb-1">
-              Selected Projects
+              Projects
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {projectsData.slice(0, 4).map((proj) => (
+              {projectsData.map((proj) => (
                 <div key={proj.id} className="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2 text-xs">
                   <div className="flex justify-between items-center">
-                    <span className="font-bold text-white">{proj.title.split('--')[0]}</span>
+                    <span className="font-bold text-white">{proj.title.split('—')[0]}</span>
                     <span className="font-mono text-slate-400 text-[10px]">{proj.period}</span>
                   </div>
                   <p className="text-slate-300 leading-relaxed">
                     {proj.description}
                   </p>
                   <div className="flex flex-wrap gap-1 pt-1">
-                    {proj.tech.slice(0, 4).map((t) => (
+                    {proj.tech.slice(0, 5).map((t) => (
                       <span key={t} className="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-cyan-300">
                         {t}
                       </span>
@@ -166,29 +182,64 @@ export default function ResumeModal({ isOpen, onClose }) {
             </div>
           </div>
 
-          {/* Technical Highlights */}
+          {/* Technical Highlights / Skills */}
           <div className="space-y-2">
             <h2 className="text-xs font-mono font-bold uppercase tracking-widest text-cyan-400 border-b border-slate-800 pb-1">
-              Technical Highlights
+              Skills
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
               <div>
-                <strong className="text-white">Frontend:</strong> React.js, JavaScript, Material UI, Vite, Axios, Responsive UI
+                <strong className="text-white">Programming Languages:</strong> JavaScript, Python, C, C++, Embedded C
               </div>
               <div>
-                <strong className="text-white">Backend:</strong> Node.js, Express.js, REST APIs, JWT, RBAC, Cron Jobs
+                <strong className="text-white">Frontend Technologies:</strong> React.js, Angular.js, HTML5, CSS3, Material UI, Axios, Vite, Responsive Web Design
               </div>
               <div>
-                <strong className="text-white">Databases:</strong> MongoDB, PostgreSQL, MySQL, Redis, Prisma ORM
+                <strong className="text-white">Backend Technologies:</strong> Node.js, Express.js, RESTful APIs, JWT Authentication, Serverless Functions, Cron Jobs, RBAC
               </div>
               <div>
-                <strong className="text-white">AI / Vision:</strong> Python, PyTorch, YOLO, YOLOv11, BoT-SORT, OpenCV
+                <strong className="text-white">Databases:</strong> MongoDB, PostgreSQL, MySQL, Redis
               </div>
               <div>
-                <strong className="text-white">Deployment / Tools:</strong> Docker, Git, GitHub, Postman, Vercel, Render, Cloudinary
+                <strong className="text-white">AI/ML & Computer Vision:</strong> Python, YOLO, YOLOv11, BoT-SORT, OpenCV, Object Detection, Tracking, LabelImg, Label Studio
               </div>
               <div>
-                <strong className="text-white">Embedded:</strong> C, C++, Embedded C, Arduino, Sensor Integration
+                <strong className="text-white">Cloud & Deployment:</strong> Vercel, Cloudinary, Render
+              </div>
+              <div>
+                <strong className="text-white">Tools & Technologies:</strong> Git, GitHub, Postman, API Testing, Prisma ORM, Multer, Sharp, SAP ABAP Integration
+              </div>
+              <div>
+                <strong className="text-white">Embedded Systems & Boards:</strong> Raspberry Pi 4 & 5, ESP8266, ESP32, Arduino, Sensor Integration, Robotics, Motor Control, Embedded System Design
+              </div>
+            </div>
+          </div>
+
+          {/* Soft Skills & Interests */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+            <div className="space-y-2">
+              <h2 className="text-xs font-mono font-bold uppercase tracking-widest text-cyan-400 border-b border-slate-800 pb-1">
+                Soft Skills
+              </h2>
+              <div className="flex flex-wrap gap-1.5 text-xs">
+                {softSkills.map((sk) => (
+                  <span key={sk} className="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">
+                    {sk}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <h2 className="text-xs font-mono font-bold uppercase tracking-widest text-cyan-400 border-b border-slate-800 pb-1">
+                Interests
+              </h2>
+              <div className="flex flex-wrap gap-1.5 text-xs">
+                {personalInterests.map((it) => (
+                  <span key={it} className="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">
+                    {it}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
@@ -202,18 +253,18 @@ export default function ResumeModal({ isOpen, onClose }) {
               {educationData.map((edu, idx) => (
                 <div key={idx} className="text-xs space-y-0.5">
                   <div className="font-bold text-white">{edu.degree}</div>
-                  <div className="text-slate-400">{edu.institution} ({edu.period})</div>
+                  <div className="text-slate-400">{edu.institution} ({edu.grade})</div>
                 </div>
               ))}
             </div>
 
             <div className="space-y-2">
               <h2 className="text-xs font-mono font-bold uppercase tracking-widest text-cyan-400 border-b border-slate-800 pb-1">
-                Achievements & Activities
+                Achievements
               </h2>
               <ul className="text-xs space-y-1 text-slate-300">
                 {achievementsData.map((ach, idx) => (
-                  <li key={idx}>• <strong className="text-white">{ach.title}</strong> -- {ach.issuer}</li>
+                  <li key={idx}>• <strong className="text-white">{ach.title}</strong> — {ach.issuer}</li>
                 ))}
               </ul>
             </div>
