@@ -1,0 +1,681 @@
+﻿\documentclass[10pt,a4paper]{article}
+
+% ============================================================
+% PACKAGES
+% ============================================================
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+
+\usepackage[default]{raleway}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[
+    a4paper,
+    top=0.55cm,
+    bottom=0.55cm,
+    left=0.65cm,
+    right=0.65cm
+]{geometry}
+
+\usepackage{xcolor}
+\usepackage{paracol}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{fancyhdr}
+\usepackage{fontawesome}
+\usepackage[hidelinks]{hyperref}
+
+% ============================================================
+% COLORS
+% ============================================================
+
+\definecolor{darkcol}{RGB}{35,35,35}
+\definecolor{accentcol}{RGB}{61,79,99}
+\definecolor{lightcol}{RGB}{100,100,100}
+
+% ============================================================
+% PAGE
+% ============================================================
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\scriptsize\textcolor{lightcol}{\thepage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\setlength{\footskip}{12pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% ============================================================
+% LIST SETTINGS
+% ============================================================
+
+\setlist[itemize]{
+    leftmargin=1.15em,
+    labelsep=0.35em,
+    itemsep=1pt,
+    topsep=1pt,
+    parsep=0pt,
+    partopsep=0pt
+}
+
+% ============================================================
+% SECTION HEADING
+% ============================================================
+
+\newcommand{\cvsection}[1]{%
+    \vspace{3pt}
+    {\large\bfseries\textcolor{darkcol}{#1}}
+    \par
+    \vspace{2pt}
+    {\color{accentcol}\rule{\linewidth}{1.1pt}}
+    \vspace{3pt}
+}
+
+% ============================================================
+% CONTACT
+% ============================================================
+
+\newcommand{\contactline}[2]{%
+    \noindent
+    \begin{tabularx}{\linewidth}{
+        @{}
+        p{0.09\linewidth}
+        @{\hspace{4pt}}
+        >{\raggedright\arraybackslash}X
+        @{}
+    }
+        \centering\textcolor{accentcol}{#1}
+        &
+        {\small #2}
+    \end{tabularx}
+    \vspace{2pt}
+}
+
+% ============================================================
+% SKILL
+% ============================================================
+
+\newcommand{\skill}[2]{%
+    {\small\bfseries\textcolor{darkcol}{#1}}
+    \par
+    {\small\RaggedRight\textcolor{darkcol}{#2}}
+    \par
+    \vspace{2pt}
+}
+
+% ============================================================
+% DATE BOX
+% ============================================================
+
+\newcommand{\datebox}[1]{%
+    \colorbox{accentcol}{%
+        \makebox[2.75cm][c]{%
+            \textcolor{white}{\scriptsize\bfseries #1}
+        }%
+    }%
+}
+
+% ============================================================
+% EXPERIENCE / PROJECT
+% ============================================================
+
+\newcommand{\event}[4]{%
+
+    \vspace{1pt}
+
+    \noindent
+    \begin{tabularx}{\linewidth}{
+        @{}
+        >{\raggedright\arraybackslash}X
+        @{\hspace{5pt}}
+        >{\raggedleft\arraybackslash}p{2.75cm}
+        @{}
+    }
+        {\small\bfseries\textcolor{darkcol}{#2}}
+        &
+        \datebox{#1}
+    \end{tabularx}
+
+    \vspace{1pt}
+
+    {\small\textcolor{lightcol}{#3}}
+
+    \vspace{1pt}
+
+    #4
+
+    \vspace{2pt}
+}
+
+% ============================================================
+% DOCUMENT
+% ============================================================
+
+\begin{document}
+
+% ============================================================
+% TWO COLUMN LAYOUT
+% ============================================================
+
+\columnratio{0.31,0.69}
+
+\setlength{\columnsep}{0.035\textwidth}
+\setlength{\columnseprule}{1.1pt}
+
+\def\columnseprulecolor{\color{accentcol}}
+
+\begin{paracol}{2}
+
+% ============================================================
+% LEFT COLUMN
+% ============================================================
+
+\raggedright
+
+% ------------------------------------------------------------
+% NAME
+% ------------------------------------------------------------
+
+{\fontsize{18}{20}\selectfont
+\bfseries\textcolor{darkcol}{Mohan Shankar G}
+}
+
+\vspace{2pt}
+
+{\small
+\textcolor{accentcol}{Full Stack Web Developer | AI Engineer}
+}
+
+% ------------------------------------------------------------
+% CONTACT
+% ------------------------------------------------------------
+
+\cvsection{Contact}
+
+\contactline
+{\faMapMarker}
+{Nidadavole, Andhra Pradesh, India}
+
+\contactline
+{\faMobile}
+{+91 8985338792}
+
+\contactline
+{\faEnvelope}
+{\href{mailto:mohan.shankar62892@gmail.com}
+{mohan.shankar62892@gmail.com}}
+
+\contactline
+{\faLinkedin}
+{\href{https://linkedin.com/in/mohan-shankar-1598432b}
+{LinkedIn Profile}}
+
+\contactline
+{\faGithub}
+{\href{https://github.com/mohanShankarG}
+{GitHub Profile}}
+
+% ------------------------------------------------------------
+% CORE SKILLS
+% ------------------------------------------------------------
+
+\cvsection{Core Skills}
+
+\skill
+{Frontend}
+{React.js, JavaScript, HTML5, CSS3, Material UI, Vite, Axios, Responsive UI}
+
+\skill
+{Backend}
+{Node.js, Express.js, REST APIs, JWT, RBAC, Cron Jobs}
+
+\skill
+{Databases}
+{MongoDB, PostgreSQL, MySQL, Redis, Prisma ORM}
+
+\skill
+{AI / ML}
+{Python, PyTorch, YOLO, YOLOv11, BoT-SORT, OpenCV}
+
+\skill
+{Tools}
+{Docker, Git, GitHub, Postman, Vercel, Render, Cloudinary}
+
+% ------------------------------------------------------------
+% ADDITIONAL
+% ------------------------------------------------------------
+
+\cvsection{Additional}
+
+{\small\bfseries Computer Vision}
+
+\vspace{1pt}
+
+{\small
+Object Detection • Tracking • Video Processing
+}
+
+\vspace{3pt}
+
+{\small\bfseries Annotation}
+
+\vspace{1pt}
+
+{\small
+LabelImg • Label Studio • Dataset Preparation
+}
+
+\vspace{3pt}
+
+{\small\bfseries Embedded}
+
+\vspace{1pt}
+
+{\small
+C • C++ • Embedded C • Arduino
+}
+
+% ------------------------------------------------------------
+% EDUCATION
+% ------------------------------------------------------------
+
+\cvsection{Education}
+
+{\small\bfseries 2015 -- 2019}
+
+\vspace{1pt}
+
+{\small\bfseries B.Tech -- Computer Science}
+
+\vspace{1pt}
+
+{\small
+Andhra University, Visakhapatnam
+}
+
+\vspace{1pt}
+
+{\small
+Computer Science and Engineering
+}
+
+\vspace{4pt}
+
+{\small\bfseries 2013 -- 2015}
+
+\vspace{1pt}
+
+{\small\bfseries Intermediate -- MPC}
+
+\vspace{1pt}
+
+{\small
+Narayana Junior College
+}
+
+\vspace{1pt}
+
+{\small
+Nidadavole
+}
+
+% ------------------------------------------------------------
+% ACHIEVEMENTS
+% ------------------------------------------------------------
+
+\cvsection{Achievements}
+
+\begin{itemize}
+
+\item {\small
+Best Trainee Certificate -- Karpagam Engineering College, Coimbatore.
+}
+
+\item {\small
+Participated in robotics programs and project presentations.
+}
+
+\item {\small
+1st place -- NBA and Nidadavole Cricket Association.
+}
+
+\end{itemize}
+
+% ============================================================
+% SWITCH TO RIGHT COLUMN
+% ============================================================
+
+\switchcolumn
+
+% ============================================================
+% RIGHT COLUMN
+% ============================================================
+
+\raggedright
+
+% ------------------------------------------------------------
+% PROFESSIONAL SUMMARY
+% ------------------------------------------------------------
+
+\cvsection{Professional Summary}
+
+{\small
+\justifying
+Full Stack Web Developer with 3+ years of experience building
+responsive web applications, RESTful APIs, dashboards, business
+workflows and data-driven systems using React.js, Node.js,
+Express.js, MongoDB and PostgreSQL. Experienced in authentication,
+RBAC, API integration, scheduled jobs, database workflows,
+deployment and production issue resolution. Also experienced in
+AI/ML integration using Python, PyTorch, YOLO and computer vision
+for real-world road-safety and video-processing applications.
+}
+
+% ------------------------------------------------------------
+% PROFESSIONAL EXPERIENCE
+% ------------------------------------------------------------
+
+\cvsection{Professional Experience}
+
+% ============================================================
+% SATRA
+% ============================================================
+
+\event
+{Dec 2024 -- Present}
+{Full Stack Developer / AI Engineer}
+{Satra Service and Solutions Pvt. Ltd.}
+{
+\begin{itemize}
+
+\item {\small
+Developed and maintained modules for the
+\textbf{GujMarg Gujarat Government Road Safety and Complaint
+Management System} using React.js, Node.js and Express.js.
+}
+
+\item {\small
+Built complaint workflows with automated officer assignment,
+hierarchical escalation, RBAC, sorting, filtering and pagination.
+}
+
+\item {\small
+Developed React dashboards and Web Audit / Citizen Audit modules
+for monitoring and reporting.
+}
+
+\item {\small
+Implemented scheduled Cron jobs for daily officer ranking
+and automated record archival.
+}
+
+\item {\small
+Integrated AI/ML workflows for road-survey image and video
+processing using Python, PyTorch, YOLO and computer-vision tools.
+}
+
+\item {\small
+Worked with Git/GitHub for collaborative development,
+debugging and production maintenance.
+}
+
+\end{itemize}
+}
+
+% ============================================================
+% SYNOZON
+% ============================================================
+
+\event
+{Aug 2023 -- Oct 2024}
+{Backend Developer Intern}
+{Synozon Technology}
+{
+\begin{itemize}
+
+\item {\small
+Developed CRM modules using React.js, Node.js, Express.js
+and MongoDB.
+}
+
+\item {\small
+Built REST APIs for customer profiles, orders, alerts
+and authentication workflows.
+}
+
+\item {\small
+Developed responsive React interfaces and integrated frontend
+components with backend APIs.
+}
+
+\item {\small
+Worked on SAP ABAP B2B ticket synchronization and
+order-tracking workflows.
+}
+
+\item {\small
+Supported backend data processing, API integration and
+application workflow improvements.
+}
+
+\end{itemize}
+}
+
+% ============================================================
+% PANTECH
+% ============================================================
+
+\event
+{Dec 2021 -- Mar 2023}
+{Embedded Developer / Jr. Software Engineer}
+{Pantech Solutions R\&D}
+{
+\begin{itemize}
+
+\item {\small
+Developed embedded and robotics projects using C, C++,
+Embedded C, Python and Arduino.
+}
+
+\item {\small
+Worked on sensor integration, motor control, hardware
+automation and system testing.
+}
+
+\item {\small
+Developed projects including Blind Man Wheelchair,
+Auto Robo Assistant and EV vehicle prototype.
+}
+
+\end{itemize}
+}
+
+% ------------------------------------------------------------
+% SELECTED PROJECTS
+% ------------------------------------------------------------
+
+\cvsection{Selected Projects}
+
+% ============================================================
+% GUJMARG
+% ============================================================
+
+\event
+{2024 -- Present}
+{GujMarg -- Road Safety Portal}
+{React.js • Node.js • Express.js}
+{
+\begin{itemize}
+
+\item {\small
+Government road-safety and complaint-management platform with
+REST APIs, dashboards, automated assignment, escalation
+workflows, RBAC, filtering, pagination and scheduled jobs.
+}
+
+\end{itemize}
+}
+
+% ============================================================
+% ROAD FURNITURE
+% ============================================================
+
+\event
+{2025 -- Present}
+{Road Furniture Asset Detection System}
+{Python • YOLOv11 • PostgreSQL • Prisma • Redis}
+{
+\begin{itemize}
+
+\item {\small
+Large-scale road-survey image/video detection system using
+YOLOv11. Implemented batch inference, queue processing,
+chainage-based deduplication, detection reporting and
+AI-output integration.
+}
+
+\end{itemize}
+}
+
+% ============================================================
+% NIRUPAA
+% ============================================================
+
+\event
+{2024 -- Present}
+{Nirupaa -- Fashion E-Commerce Platform}
+{React.js • Node.js • Express.js • MongoDB}
+{
+\begin{itemize}
+
+\item {\small
+Full-stack e-commerce application with product browsing,
+filtering, cart, checkout, authentication, admin functionality
+and REST APIs. Integrated Cloudinary, Multer and Sharp for
+image management and deployed using Vercel and Render.
+}
+
+\end{itemize}
+}
+
+% ============================================================
+% VEHICLE AI
+% ============================================================
+
+\event
+{2024 -- Present}
+{Vehicle Detection \& Tracking AI}
+{Python • PyTorch • YOLO • BoT-SORT • OpenCV}
+{
+\begin{itemize}
+
+\item {\small
+Computer-vision pipeline for vehicle detection, tracking and
+video processing, with dataset preparation and annotation using
+LabelImg and Label Studio.
+}
+
+\end{itemize}
+}
+
+% ------------------------------------------------------------
+% TECHNICAL HIGHLIGHTS
+% ------------------------------------------------------------
+
+\cvsection{Technical Highlights}
+
+\begin{itemize}
+
+\item {\small
+\textbf{Frontend:}
+React.js, JavaScript, Material UI, Vite, Axios,
+responsive web development.
+}
+
+\item {\small
+\textbf{Backend:}
+Node.js, Express.js, REST APIs, JWT authentication,
+RBAC, Cron Jobs.
+}
+
+\item {\small
+\textbf{Database:}
+MongoDB, PostgreSQL, MySQL, Redis, Prisma ORM.
+}
+
+\item {\small
+\textbf{Deployment / Tools:}
+Docker, Git, GitHub, Postman, Vercel, Render,
+Cloudinary, Multer, Sharp.
+}
+
+\item {\small
+\textbf{AI / Computer Vision:}
+Python, PyTorch, YOLO, YOLOv11, BoT-SORT,
+OpenCV, video processing.
+}
+
+\end{itemize}
+
+% ------------------------------------------------------------
+% EMBEDDED PROJECTS
+% ------------------------------------------------------------
+
+\cvsection{Embedded Projects}
+
+{\small\bfseries Blind Man Wheelchair}
+
+\vspace{1pt}
+
+{\small
+Sensor-based mobility assistance project involving sensors,
+motor control and automation.
+}
+
+\vspace{3pt}
+
+{\small\bfseries Auto Robo Assistant}
+
+\vspace{1pt}
+
+{\small
+Robotics project involving embedded programming,
+sensor integration and automated movement.
+}
+
+\vspace{3pt}
+
+{\small\bfseries EV Vehicle Prototype}
+
+\vspace{1pt}
+
+{\small
+Vehicle prototype involving embedded systems,
+hardware integration and motor-control concepts.
+}
+
+% ------------------------------------------------------------
+% TARGET ROLES
+% ------------------------------------------------------------
+
+\vspace{4pt}
+
+{\small
+\textbf{Target Roles:}
+Full Stack Developer • React.js Developer • Node.js Developer
+}
+
+% ============================================================
+% END
+% ============================================================
+
+\end{paracol}
+
+\end{document}
