@@ -96,16 +96,16 @@ export const skillsData = {
     ]
   },
   embedded: {
-    title: "Embedded & Cloud IoT",
+    title: "Embedded, Robotics & Healthcare IoT",
     icon: "Cpu",
-    description: "Raspberry Pi computing, Cloud Telegram/WhatsApp emergency bots, sensors, and robotics automation.",
+    description: "Raspberry Pi 4/5, ROS, Cloud WhatsApp/Telegram emergency bots, medical vitals sensors, and autonomous robotics.",
     skills: [
-      { name: "Raspberry Pi 5 & Pi 4", level: "Expert", tags: ["Linux SBC", "GPIO", "Edge AI", "Python Core"] },
-      { name: "Cloud Emergency Alerting Bots", level: "Expert", tags: ["Telegram Bot API", "WhatsApp Bot", "Webhook Alerts", "SOS Dispatch"] },
-      { name: "Emergency Contact Automation", level: "Expert", tags: ["Ambulance (EMS)", "Family Members", "Police Station", "GPS Telemetry"] },
-      { name: "Embedded C & Python", level: "Advanced", tags: ["Low-Level", "Memory Optimization", "Hardware Control"] },
-      { name: "LiDAR, Ultrasonic & IR Sensors", level: "Advanced", tags: ["LiDAR Sensor", "Ultrasonic", "IR Arrays", "Telemetry"] },
-      { name: "Robotics & Motion Control", level: "Advanced", tags: ["Obstacle Avoidance", "Auto-Stop", "YOLOv8 Perception", "Stability"] }
+      { name: "Raspberry Pi 4 & Pi 5", level: "Expert", tags: ["Linux SBC", "ROS", "GPIO", "Edge AI", "Python Core"] },
+      { name: "Cloud Emergency Alerting Bots", level: "Expert", tags: ["WhatsApp Bot", "Telegram Bot API", "Ambulance Routing", "Police Traffic Clearance"] },
+      { name: "Medical & Environmental Sensors", level: "Advanced", tags: ["Pulse Oximeter (MAX30102)", "DHT22 (Temp & Humidity)", "IMU (MPU6050)", "IR", "Ultrasonic"] },
+      { name: "LiDAR SLAM & Path Planning", level: "Advanced", tags: ["Room Mapping", "Obstacle Avoidance", "Track Navigation", "DC Geared Motors"] },
+      { name: "AI Vision & Pose Tracking", level: "Advanced", tags: ["YOLOv8", "Skeleton Tracking", "Fall Detection", "Face Recognition"] },
+      { name: "Speech & IoT Protocols", level: "Advanced", tags: ["Text-to-Speech (TTS)", "MQTT", "HTML/CSS/JS Telemetry", "Embedded C"] }
     ]
   }
 };
@@ -176,11 +176,11 @@ export const experienceData = [
     type: "Full-Time",
     highlights: [
       "Worked on Electric Vehicle (EV) prototype design integrating embedded systems, AI, and battery telemetry.",
-      "Developed assistive robotics projects including the Blind Man Wheelchair (Raspberry Pi 5 with obstacle detection & autonomous stopping) and Auto Robo Assistant (Raspberry Pi 4, LiDAR, YOLOv8 object detection, and motion control).",
-      "Engineered cloud emergency notification bots (Telegram Bot & WhatsApp Bot) powered by Raspberry Pi 5 to automatically dispatch real-time SOS alerts to Ambulance (EMS), family members, and police stations.",
-      "Collaborated on hardware integration, sensor systems (ultrasonic, IR, LiDAR), motor drivers, Embedded C, Python, and automated safety mechanisms."
+      "Developed assistive robotics projects including the Blind Man Wheelchair (Raspberry Pi 5 with obstacle detection & autonomous stopping) and Auto Robo Assistant for Elderly Care (Raspberry Pi 4, ROS, WhatsApp Bot, LiDAR SLAM, MAX30102 SpO2/Pulse, DHT22, and YOLOv8 skeleton/fall detection).",
+      "Engineered cloud emergency notification bots (Telegram Bot & WhatsApp Bot) powered by Raspberry Pi 5 & 4 to automatically dispatch real-time SOS alerts to Ambulance (EMS), nearby Hospitals, family members, and police stations for traffic clearance.",
+      "Collaborated on hardware integration, sensor systems (ultrasonic, IR, LiDAR, IMU MPU6050, pulse oximeter), motor drivers, Embedded C, Python, and automated safety mechanisms."
     ],
-    tech: ["Raspberry Pi 5", "Raspberry Pi 4", "Telegram Bot API", "WhatsApp Bot", "YOLOv8", "OpenCV", "LiDAR", "Embedded C", "Python", "Sensors", "Robotics"]
+    tech: ["Raspberry Pi 4", "Raspberry Pi 5", "ROS", "WhatsApp Bot", "Telegram Bot API", "YOLOv8", "OpenCV", "PyTorch", "LiDAR", "MAX30102", "DHT22", "MPU6050", "MQTT", "Python", "Sensors", "Robotics"]
   }
 ];
 
@@ -379,50 +379,65 @@ export const projectsData = [
   },
   {
     id: "auto-robo-assistant",
-    title: "Auto Robo Assistant",
-    subtitle: "Autonomous Robot with AI Perception & Hardware Motion Control",
+    title: "Auto Robo Assistant for Elderly Care",
+    subtitle: "Autonomous Healthcare & Patient Monitoring Robot without Caregiver Presence",
     category: "Embedded / IoT",
-    badge: "Autonomous Robotics & AI",
+    badge: "AI Healthcare Robotics",
     period: "2022 -- 2023",
-    client: "Pantech Solutions R&D / Robotics",
+    client: "Assistive Healthcare & Robotics R&D",
     description:
-      "An autonomous robot engineered with embedded sensors and AI techniques for intelligent environment perception and navigation. Features obstacle avoidance and motion control algorithms, collision prevention auto-stop safety mechanisms, and Embedded C and Python programs for hardware management on Raspberry Pi 4.",
+      "An autonomous healthcare assistant robot designed for elderly patients living independently or without immediate caregiver presence. The robot continuously cares for the patient using integrated medical and environmental sensors, provides spoken medication instructions via Text-to-Speech (TTS), navigates rooms using LiDAR SLAM and IR track guidance, and leverages web camera vision (YOLOv8 & PyTorch) for skeleton tracking, fall detection, and facial recognition. In critical emergencies, it coordinates an automated multi-tier emergency response via WhatsApp Bot—contacting in-range Ambulances (or nearby Hospitals if none in range), sounding an external gate buzzer to alert neighbors, and simultaneously notifying the patient's family and the Police Station for emergency road traffic clearance.",
     features: [
-      "Developed an autonomous robot using embedded sensors and AI techniques.",
-      "Implemented obstacle avoidance and motion control algorithms.",
-      "Designed safety mechanisms including auto-stop and collision prevention.",
-      "Developed Embedded C and Python programs for hardware management.",
-      "Optimized robot movement and stability through testing and debugging.",
-      "Integrated OpenCV and YOLOv8 object detection for real-time visual perception and obstacle classification.",
-      "Multi-sensor fusion leveraging LiDAR sensor, ultrasonic sensor, and IR sensor arrays for 360° environmental awareness."
+      "Autonomous Elderly Care Without Caregiver: Round-the-clock patient monitoring, companion interaction, and emergency safety when a human caregiver is not present.",
+      "Pulse Oximeter (MAX30102): Integrated touch-pad and armrest sensor measuring patient heart rate (BPM) and blood oxygen saturation (SpO₂) in real time.",
+      "Temperature & Humidity (DHT22): Monitors living space ambient temperature and humidity to ensure indoor conditions remain safe and comfortable for the senior.",
+      "Medication Guidance & Text-to-Speech (TTS): Speech processing module audibly instructs the patient on scheduled medication dosages, hydration, and healthcare steps.",
+      "LiDAR Room Mapping & IR Track Guidance: Room SLAM mapping, autonomous path planning, and real-time obstacle avoidance via LiDAR, with IR sensors guiding along designated floor tracks to reach the patient.",
+      "Web Camera AI Vision (YOLOv8 & PyTorch): Real-time human skeleton pose estimation, rapid fall detection, and facial recognition to verify patient identity.",
+      "IMU (MPU6050) Stability & Collision Detection: 6-axis inertial measurement unit maintains robot balance, tilt stability, and detects if the robot tips or contacts an object.",
+      "Multi-Tier WhatsApp Bot Emergency Dispatch: Automatically queries ambulances in range via WhatsApp Bot; if none are available in range, seamlessly re-routes the emergency call to the nearest Hospital.",
+      "Perimeter Gate Buzzer & Police Traffic Clearance: Activates an audible siren buzzer near the front gate to alert neighbors, while dispatching instant alerts to the patient's family and Police Station to clear road traffic in critical moments.",
+      "Robotics Control & Telemetry Dashboard: Built on Raspberry Pi 4, ROS (Robot Operating System), DC geared motors, MQTT IoT protocol, and a responsive HTML/CSS/JavaScript web dashboard."
     ],
     architecture: {
-      controller: "Raspberry Pi 4 (Quad-Core SBC running Linux)",
-      aiVision: "OpenCV, YOLOv8 Object Detection Pipeline",
-      firmware: "Embedded C & Python hardware management",
-      sensors: "LiDAR Sensor, Ultrasonic Sensor, IR Sensor Array",
-      safety: "Auto-Stop & Collision Prevention Circuitry",
-      motion: "PWM Motor Drivers, Motion Control & Stability Tuning"
+      controller: "Raspberry Pi 4, ROS (Robot Operating System), DC Geared Motors",
+      vitalsSensors: "MAX30102 Pulse Oximeter (Heart Rate & SpO₂), DHT22 (Temp & Humidity)",
+      navigation: "LiDAR (Room Mapping, SLAM, Path Planning), IR Sensor (Track Navigation), Ultrasonic",
+      aiVision: "Web Camera, YOLOv8, PyTorch, OpenCV (Skeleton Tracking, Fall Detection, Face ID)",
+      speechAudio: "Speech Processing & Text-to-Speech (TTS) Medication Reminders",
+      stability: "MPU6050 6-Axis IMU (Robot Tilt, Balance & Collision Detection)",
+      emergencyBot: "WhatsApp Bot (Ambulance in range / Hospital, Family, Police Traffic Clearance)",
+      gateAlarm: "Perimeter Gate Buzzer (Neighbor Alert) & MQTT IoT Messaging",
+      webPortal: "HTML, CSS, JavaScript (Real-Time Sensor & Vitals Dashboard)"
     },
     tech: [
-      "OpenCV",
-      "Python",
-      "Embedded C",
-      "Object Detection YOLOv8",
       "Raspberry Pi 4",
+      "ROS",
+      "Python",
+      "WhatsApp Bot",
+      "LiDAR",
+      "YOLOv8",
+      "PyTorch",
+      "OpenCV",
+      "Pulse Oximeter (MAX30102)",
+      "DHT22 (Temp & Humidity)",
+      "IMU (MPU6050)",
       "IR Sensor",
       "Ultrasonic Sensor",
-      "LiDAR Sensor",
-      "Obstacle Avoidance",
-      "Motion Control",
-      "Auto-Stop Safety"
+      "Speech Processing (TTS)",
+      "MQTT",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "DC Geared Motors"
     ],
     metrics: [
-      { label: "AI Vision", val: "YOLOv8 & OpenCV" },
-      { label: "Core Controller", val: "Raspberry Pi 4" },
-      { label: "Sensors", val: "LiDAR, Ultrasonic, IR" }
+      { label: "Vitals Monitored", val: "SpO₂, Pulse & Temp" },
+      { label: "Emergency Dispatch", val: "WhatsApp Bot & Siren" },
+      { label: "Navigation & SLAM", val: "LiDAR & IR Track" },
+      { label: "AI Vision & Falls", val: "YOLOv8 & Skeleton" }
     ],
-    color: "from-amber-600 to-rose-600"
+    color: "from-rose-600 via-pink-600 to-amber-600"
   }
 ];
 
@@ -621,33 +636,33 @@ export const systemPipelines = [
   },
   {
     id: "auto-robo-flow",
-    title: "Auto Robo Assistant AI & Motion Pipeline",
-    description: "Multi-sensor telemetry, YOLOv8 object detection, motion control algorithms, and fail-safe auto-stop execution on Raspberry Pi 4.",
+    title: "Auto Robo Assistant Elderly Care & Emergency Pipeline",
+    description: "Autonomous senior patient monitoring, LiDAR room mapping, YOLOv8 fall detection, medication TTS, and multi-tier WhatsApp emergency dispatch.",
     steps: [
       {
         step: "01",
-        title: "Multi-Sensor Environmental Telemetry",
-        desc: "LiDAR, Ultrasonic, and IR sensor arrays continuously capture 360-degree spatial depth, range metrics, and ground proximity."
+        title: "LiDAR Room Mapping & IR Track Navigation",
+        desc: "LiDAR executes room SLAM mapping, autonomous path planning, and real-time obstacle avoidance; IR sensors guide the robot along designated tracks directly to the patient's bedside or chair."
       },
       {
         step: "02",
-        title: "YOLOv8 & OpenCV Vision Processing",
-        desc: "Raspberry Pi 4 captures camera frames via OpenCV, feeding lightweight YOLOv8 models for real-time dynamic obstacle classification."
+        title: "Patient Vitals (SpO₂/Pulse) & Climate Monitoring",
+        desc: "Touch-pad / armrest MAX30102 pulse oximeter reads SpO₂ & heart rate; DHT22 monitors room ambient temperature & humidity to ensure safe, comfortable conditions for the senior."
       },
       {
         step: "03",
-        title: "Obstacle Avoidance & Path Vectoring",
-        desc: "Sensor fusion algorithms evaluate proximity thresholds and dynamically compute collision-free navigation vectors."
+        title: "YOLOv8 Skeleton Tracking, Fall Detection & Face ID",
+        desc: "Web camera streams frames to YOLOv8 & PyTorch to perform human skeleton pose tracking, facial recognition patient verification, and instant slip/fall accident detection."
       },
       {
         step: "04",
-        title: "Fail-Safe Auto-Stop Mechanism",
-        desc: "Safety-critical collision prevention interlocks immediately override motor drive signals upon close-range hazard detection."
+        title: "Spoken Medication Guidance & IMU Balance",
+        desc: "Text-to-Speech (TTS) speech processing speaks audible medication schedules and health instructions; MPU6050 6-axis IMU continuously maintains robot tilt balance and detects physical impacts."
       },
       {
         step: "05",
-        title: "Embedded C & Python Motion Execution",
-        desc: "Embedded C low-level routines command PWM motor controllers to optimize robot stability, turning precision, and smooth deceleration."
+        title: "WhatsApp SOS, Gate Siren & Police Clearance",
+        desc: "In emergencies: WhatsApp Bot checks in-range Ambulances (or routes to nearest Hospital), sounds entrance gate buzzer for neighbors, and alerts Family & Police to clear road traffic."
       }
     ]
   }

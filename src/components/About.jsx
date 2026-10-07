@@ -39,7 +39,7 @@ export default function About() {
     {
       icon: Database,
       title: "Data & Embedded Systems",
-      desc: "Designing databases (PostgreSQL, MongoDB, Redis, Prisma) and integrating edge hardware (Raspberry Pi 5) with Telegram/WhatsApp emergency cloud alerting.",
+      desc: "Designing databases (PostgreSQL, MongoDB, Redis, Prisma) and integrating edge hardware (Raspberry Pi 5 & 4) with WhatsApp/Telegram emergency cloud alerting and healthcare robotics.",
       color: "text-purple-400",
       bg: "bg-purple-500/10 border-purple-500/20"
     }
@@ -59,7 +59,7 @@ export default function About() {
             Engineering at the intersection of <span className="text-cyan-400">Web Scale</span>, <span className="text-blue-400">Computer Vision</span> & <span className="text-emerald-400">Embedded IoT</span>
           </h2>
           <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
-            From Raspberry Pi 5 and Cloud Emergency Alerting Bots to state-level governmental road safety portals and deep learning computer vision pipelines.
+            From Raspberry Pi 5 & 4 healthcare robotics and Cloud Emergency Alerting Bots to state-level governmental road safety portals and deep learning computer vision pipelines.
           </p>
         </div>
 
@@ -87,7 +87,7 @@ export default function About() {
                   "Production-grade full-stack architectures serving governmental civil operations (GujMarg)",
                   "Automated cron jobs for daily ranking computations and massive record archiving",
                   "Deep learning batch pipelines processing highway video surveys with deduplication",
-                  "Hardware integration with Raspberry Pi 5, Telegram/WhatsApp emergency bots (Ambulance, Family, Police), and sensor automation"
+                  "Hardware integration with Raspberry Pi 5 & 4, WhatsApp/Telegram emergency bots (Ambulance, Hospital, Family, Police), and medical sensor automation"
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
                     <CheckCircle2 size={16} className="text-cyan-400 shrink-0 mt-0.5" />
