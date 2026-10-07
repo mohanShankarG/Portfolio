@@ -201,7 +201,7 @@ export default function ResumeModal({ isOpen, onClose }) {
                 <strong className="text-white">Databases:</strong> MongoDB, MongoDB Atlas, PostgreSQL, MySQL, Redis
               </div>
               <div>
-                <strong className="text-white">AI/ML & Computer Vision:</strong> Python, YOLO, YOLOv11, BoT-SORT, OpenCV, Object Detection, Tracking, LabelImg, Label Studio
+                <strong className="text-white">AI/ML & Computer Vision:</strong> Python, YOLOv8, YOLOv11, BoT-SORT, OpenCV, Object Detection, Tracking, LabelImg, Label Studio
               </div>
               <div>
                 <strong className="text-white">Cloud & Deployment:</strong> Vercel, Cloudinary, Render
@@ -210,7 +210,7 @@ export default function ResumeModal({ isOpen, onClose }) {
                 <strong className="text-white">Tools & Technologies:</strong> VS Code, Postman, Git, GitHub, API Testing, Prisma ORM, Multer, Sharp, SAP ABAP Integration
               </div>
               <div>
-                <strong className="text-white">Embedded Systems & Cloud IoT:</strong> Raspberry Pi 5, Telegram Bot API, WhatsApp Bot (Ambulance, Family, Police SOS Alerts), Sensor Integration, Robotics, Motor Control, Embedded System Design
+                <strong className="text-white">Embedded Systems & Cloud IoT:</strong> Raspberry Pi 5, Raspberry Pi 4, LiDAR Sensor, Ultrasonic & IR Sensors, Telegram Bot API, WhatsApp Bot (Ambulance, Family, Police SOS Alerts), Robotics & Motion Control, Auto-Stop Safety
               </div>
             </div>
           </div>

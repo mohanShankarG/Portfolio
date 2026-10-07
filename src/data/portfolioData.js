@@ -77,7 +77,7 @@ export const skillsData = {
     skills: [
       { name: "Python", level: "Advanced", tags: ["Data Pipelines", "Automation", "Scripting"] },
       { name: "PyTorch", level: "Advanced", tags: ["Deep Learning", "Tensor Ops", "Model Eval"] },
-      { name: "YOLO & YOLOv11", level: "Expert", tags: ["Asset Detection", "Batch Inference", "Weights"] },
+      { name: "YOLO (YOLOv8 & YOLOv11)", level: "Expert", tags: ["Asset Detection", "Object Detection", "Inference"] },
       { name: "OpenCV", level: "Advanced", tags: ["Video Processing", "Frame Extraction", "Filters"] },
       { name: "BoT-SORT & ByteTrack", level: "Advanced", tags: ["Multi-Object Tracking", "Trajectory"] },
       { name: "Label Studio & LabelImg", level: "Expert", tags: ["Dataset Annotation", "Curation"] }
@@ -98,14 +98,14 @@ export const skillsData = {
   embedded: {
     title: "Embedded & Cloud IoT",
     icon: "Cpu",
-    description: "Raspberry Pi 5 computing, Cloud Telegram/WhatsApp emergency bots, sensors, and robotics automation.",
+    description: "Raspberry Pi computing, Cloud Telegram/WhatsApp emergency bots, sensors, and robotics automation.",
     skills: [
-      { name: "Raspberry Pi 5", level: "Expert", tags: ["Linux SBC", "GPIO", "Edge AI", "Python Core"] },
+      { name: "Raspberry Pi 5 & Pi 4", level: "Expert", tags: ["Linux SBC", "GPIO", "Edge AI", "Python Core"] },
       { name: "Cloud Emergency Alerting Bots", level: "Expert", tags: ["Telegram Bot API", "WhatsApp Bot", "Webhook Alerts", "SOS Dispatch"] },
       { name: "Emergency Contact Automation", level: "Expert", tags: ["Ambulance (EMS)", "Family Members", "Police Station", "GPS Telemetry"] },
-      { name: "Embedded C & C/C++", level: "Advanced", tags: ["Low-Level", "Memory Optimization", "Hardware Control"] },
-      { name: "Sensor Integration & Hardware Automation", level: "Advanced", tags: ["Ultrasonic", "IR Sensors", "Relays", "Actuators"] },
-      { name: "Robotics & Assistive Mobility Design", level: "Advanced", tags: ["Autonomous Navigation", "Obstacle Avoidance", "Auto-Stop"] }
+      { name: "Embedded C & Python", level: "Advanced", tags: ["Low-Level", "Memory Optimization", "Hardware Control"] },
+      { name: "LiDAR, Ultrasonic & IR Sensors", level: "Advanced", tags: ["LiDAR Sensor", "Ultrasonic", "IR Arrays", "Telemetry"] },
+      { name: "Robotics & Motion Control", level: "Advanced", tags: ["Obstacle Avoidance", "Auto-Stop", "YOLOv8 Perception", "Stability"] }
     ]
   }
 };
@@ -176,11 +176,11 @@ export const experienceData = [
     type: "Full-Time",
     highlights: [
       "Worked on Electric Vehicle (EV) prototype design integrating embedded systems, AI, and battery telemetry.",
-      "Developed assistive robotics projects including the Blind Man Wheelchair (obstacle detection & autonomous stopping) and Auto Robo Assistant.",
+      "Developed assistive robotics projects including the Blind Man Wheelchair (Raspberry Pi 5 with obstacle detection & autonomous stopping) and Auto Robo Assistant (Raspberry Pi 4, LiDAR, YOLOv8 object detection, and motion control).",
       "Engineered cloud emergency notification bots (Telegram Bot & WhatsApp Bot) powered by Raspberry Pi 5 to automatically dispatch real-time SOS alerts to Ambulance (EMS), family members, and police stations.",
-      "Collaborated on hardware integration, sensor systems (ultrasonic, IR), motor drivers, Embedded C, Python, and automated safety mechanisms."
+      "Collaborated on hardware integration, sensor systems (ultrasonic, IR, LiDAR), motor drivers, Embedded C, Python, and automated safety mechanisms."
     ],
-    tech: ["Raspberry Pi 5", "Telegram Bot API", "WhatsApp Bot", "Cloud Emergency Alerts", "Embedded C", "C/C++", "Python", "Sensors", "Robotics"]
+    tech: ["Raspberry Pi 5", "Raspberry Pi 4", "Telegram Bot API", "WhatsApp Bot", "YOLOv8", "OpenCV", "LiDAR", "Embedded C", "Python", "Sensors", "Robotics"]
   }
 ];
 
@@ -353,13 +353,12 @@ export const projectsData = [
     category: "Embedded / IoT",
     badge: "Hardware & Robotics",
     period: "2021 -- 2023",
-    client: "Pantech R&D / Innovation Showcase",
+    client: "Pantech R&D / Assistive Tech",
     description:
-      "An AI-powered assistive mobility and autonomous robotics platform driven exclusively by Raspberry Pi 5. Integrates real-time sensor monitoring, automated motor control, and cloud emergency notification bots (Telegram Bot & WhatsApp Bot) that instantly dispatch SOS alerts with live telemetry and GPS coordinates to Ambulance services, Family Members, and Police Stations during emergencies or falls.",
+      "An AI-powered assistive mobility platform driven exclusively by Raspberry Pi 5. Integrates real-time ultrasonic and IR sensor monitoring, automated motor control, and cloud emergency notification bots (Telegram Bot & WhatsApp Bot) that instantly dispatch SOS alerts with live telemetry and GPS coordinates to Ambulance services, Family Members, and Police Stations during emergencies or falls.",
     features: [
-      "Blind Man Wheelchair: AI-enabled wheelchair powered by Raspberry Pi 5 with ultrasonic and IR sensors for obstacle detection, autonomous collision avoidance, and automatic emergency stopping",
-      "Cloud Emergency SOS Dispatch: Integrated Telegram Bot & WhatsApp Bot cloud integration that automatically triggers instant emergency alerts with location coordinates to the Ambulance (EMS), Family Members, and Police Station upon fall/impact or distress trigger",
-      "Auto Robo Assistant: Autonomous robot using Raspberry Pi 5 embedded sensors and AI techniques for obstacle avoidance, motion control, and collision prevention",
+      "Blind Man Wheelchair: AI-enabled wheelchair powered exclusively by Raspberry Pi 5 with ultrasonic and IR sensors for obstacle detection, autonomous collision avoidance, and automatic emergency stopping",
+      "Cloud Emergency SOS Dispatch: Integrated Telegram Bot & WhatsApp Bot cloud integration that automatically triggers instant emergency alerts with location coordinates to Ambulance (EMS), Family Members, and Police Station upon fall/impact or distress trigger",
       "EV Vehicle Prototype: Design integrating embedded systems and AI, microcontroller battery monitoring, and PWM motor control",
       "Single Board Computer: Dedicated high-performance Raspberry Pi 5 running Linux SBC architecture with Embedded C and Python automation"
     ],
@@ -377,6 +376,53 @@ export const projectsData = [
       { label: "Emergency Dispatch", val: "Ambulance, Family, Police" }
     ],
     color: "from-teal-600 to-indigo-600"
+  },
+  {
+    id: "auto-robo-assistant",
+    title: "Auto Robo Assistant",
+    subtitle: "Autonomous Robot with AI Perception & Hardware Motion Control",
+    category: "Embedded / IoT",
+    badge: "Autonomous Robotics & AI",
+    period: "2022 -- 2023",
+    client: "Pantech Solutions R&D / Robotics",
+    description:
+      "An autonomous robot engineered with embedded sensors and AI techniques for intelligent environment perception and navigation. Features obstacle avoidance and motion control algorithms, collision prevention auto-stop safety mechanisms, and Embedded C and Python programs for hardware management on Raspberry Pi 4.",
+    features: [
+      "Developed an autonomous robot using embedded sensors and AI techniques.",
+      "Implemented obstacle avoidance and motion control algorithms.",
+      "Designed safety mechanisms including auto-stop and collision prevention.",
+      "Developed Embedded C and Python programs for hardware management.",
+      "Optimized robot movement and stability through testing and debugging.",
+      "Integrated OpenCV and YOLOv8 object detection for real-time visual perception and obstacle classification.",
+      "Multi-sensor fusion leveraging LiDAR sensor, ultrasonic sensor, and IR sensor arrays for 360° environmental awareness."
+    ],
+    architecture: {
+      controller: "Raspberry Pi 4 (Quad-Core SBC running Linux)",
+      aiVision: "OpenCV, YOLOv8 Object Detection Pipeline",
+      firmware: "Embedded C & Python hardware management",
+      sensors: "LiDAR Sensor, Ultrasonic Sensor, IR Sensor Array",
+      safety: "Auto-Stop & Collision Prevention Circuitry",
+      motion: "PWM Motor Drivers, Motion Control & Stability Tuning"
+    },
+    tech: [
+      "OpenCV",
+      "Python",
+      "Embedded C",
+      "Object Detection YOLOv8",
+      "Raspberry Pi 4",
+      "IR Sensor",
+      "Ultrasonic Sensor",
+      "LiDAR Sensor",
+      "Obstacle Avoidance",
+      "Motion Control",
+      "Auto-Stop Safety"
+    ],
+    metrics: [
+      { label: "AI Vision", val: "YOLOv8 & OpenCV" },
+      { label: "Core Controller", val: "Raspberry Pi 4" },
+      { label: "Sensors", val: "LiDAR, Ultrasonic, IR" }
+    ],
+    color: "from-amber-600 to-rose-600"
   }
 ];
 
@@ -570,6 +616,38 @@ export const systemPipelines = [
         step: "05",
         title: "Multi-Contact SOS Dispatch",
         desc: "Simultaneous emergency SOS alerts delivered instantly to 🚑 Ambulance (EMS), 👨‍👩‍👧 Family Members, and 🚓 Police Station."
+      }
+    ]
+  },
+  {
+    id: "auto-robo-flow",
+    title: "Auto Robo Assistant AI & Motion Pipeline",
+    description: "Multi-sensor telemetry, YOLOv8 object detection, motion control algorithms, and fail-safe auto-stop execution on Raspberry Pi 4.",
+    steps: [
+      {
+        step: "01",
+        title: "Multi-Sensor Environmental Telemetry",
+        desc: "LiDAR, Ultrasonic, and IR sensor arrays continuously capture 360-degree spatial depth, range metrics, and ground proximity."
+      },
+      {
+        step: "02",
+        title: "YOLOv8 & OpenCV Vision Processing",
+        desc: "Raspberry Pi 4 captures camera frames via OpenCV, feeding lightweight YOLOv8 models for real-time dynamic obstacle classification."
+      },
+      {
+        step: "03",
+        title: "Obstacle Avoidance & Path Vectoring",
+        desc: "Sensor fusion algorithms evaluate proximity thresholds and dynamically compute collision-free navigation vectors."
+      },
+      {
+        step: "04",
+        title: "Fail-Safe Auto-Stop Mechanism",
+        desc: "Safety-critical collision prevention interlocks immediately override motor drive signals upon close-range hazard detection."
+      },
+      {
+        step: "05",
+        title: "Embedded C & Python Motion Execution",
+        desc: "Embedded C low-level routines command PWM motor controllers to optimize robot stability, turning precision, and smooth deceleration."
       }
     ]
   }

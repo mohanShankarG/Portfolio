@@ -14,7 +14,8 @@ import {
   ShoppingBag,
   Activity,
   Briefcase,
-  Radio
+  Radio,
+  Bot
 } from 'lucide-react';
 import { systemPipelines } from '../data/portfolioData';
 
@@ -38,6 +39,8 @@ export default function ArchitectureVisualizer() {
         return <Briefcase size={18} />;
       case 'embedded-flow':
         return <Radio size={18} />;
+      case 'auto-robo-flow':
+        return <Bot size={18} />;
       default:
         return <Layers size={18} />;
     }
