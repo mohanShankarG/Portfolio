@@ -64,7 +64,7 @@ export const skillsData = {
     description: "Relational, document, and caching layers optimized for high query velocity.",
     skills: [
       { name: "PostgreSQL", level: "Advanced", tags: ["Relational", "Indexing", "Complex Queries"] },
-      { name: "MongoDB & Mongoose", level: "Expert", tags: ["Aggregation", "Schema Design", "NoSQL"] },
+      { name: "MongoDB & MongoDB Atlas", level: "Expert", tags: ["Cloud Clusters", "Aggregation", "Schema Design", "Mongoose"] },
       { name: "Prisma ORM", level: "Advanced", tags: ["Type-Safe Queries", "Migrations"] },
       { name: "Redis", level: "Advanced", tags: ["Queue Management", "Caching", "Pub/Sub"] },
       { name: "MySQL", level: "Intermediate", tags: ["Joins", "Transactions", "Relational"] }
@@ -88,9 +88,9 @@ export const skillsData = {
     icon: "Wrench",
     description: "Modern containerization, cloud deployment, asset optimization, and version control.",
     skills: [
+      { name: "VS Code & Postman", level: "Expert", tags: ["IDE", "API Testing", "Environments", "Debugging"] },
       { name: "Git & GitHub", level: "Expert", tags: ["Branching", "Code Reviews", "CI/CD"] },
       { name: "Vercel & Render", level: "Advanced", tags: ["Automated Deployments", "Serverless"] },
-      { name: "Postman & API Testing", level: "Expert", tags: ["Test Collections", "Environments", "Docs"] },
       { name: "Cloudinary / Multer / Sharp", level: "Advanced", tags: ["Media Pipelines", "Compression"] },
       { name: "Docker", level: "Intermediate", tags: ["Containers", "Images", "Composes"] }
     ]
@@ -160,13 +160,13 @@ export const experienceData = [
     period: "Aug 2023 -- Oct 2024",
     type: "Internship",
     highlights: [
-      "Developed full-stack CRM modules for customer interaction tracking and relationship management using React.js, Node.js, and MongoDB.",
+      "Developed full-stack CRM modules for customer interaction tracking and relationship management using React.js, Node.js, and MongoDB Atlas.",
       "Created secure backend REST APIs using Node.js and Express.js for orders, alerts, authentication, and customer profiles.",
-      "Integrated SAP ABAP for enterprise-level B2B ticket synchronization and business process automation.",
+      "Integrated SAP ABAP for enterprise-level ticket synchronization and business process automation.",
       "Implemented responsive React.js user interfaces for seamless CRM operations.",
-      "Designed backend architecture for efficient data handling, synchronization, and customer profile management."
+      "Designed backend architecture for efficient data handling and synchronization, utilizing VS Code and Postman for development and testing."
     ],
-    tech: ["Node.js", "Express.js", "React.js", "MongoDB", "REST APIs", "JWT", "SAP ABAP"]
+    tech: ["Node.js", "Express.js", "React.js", "MongoDB Atlas", "SAP ABAP", "VS Code", "Postman", "REST APIs", "JWT"]
   },
   {
     role: "Embedded Developer / Jr. Software Engineer",
@@ -321,25 +321,27 @@ export const projectsData = [
     period: "2023 -- 2024",
     client: "Synozon Technology",
     description:
-      "Full-stack CRM platform for customer interaction tracking, relationship management, and enterprise-level SAP ABAP B2B ticket synchronization.",
+      "Full-stack CRM platform for customer interaction tracking, relationship management, and enterprise-level SAP ABAP integration.",
     features: [
-      "Developed full-stack CRM platform using React.js, Node.js, and MongoDB",
+      "Developed full-stack CRM platform using React.js, Node.js, and MongoDB Atlas",
       "Created REST APIs for orders, alerts, authentication, and customer profiles",
       "Integrated SAP ABAP for enterprise-level order tracking and business process automation",
       "Implemented secure authentication and notification modules",
-      "Designed backend architecture for efficient data handling and synchronization"
+      "Designed backend architecture for efficient data handling and synchronization",
+      "Developed and tested full API suite using VS Code and Postman"
     ],
     architecture: {
       frontend: "React.js, Responsive UI",
       backend: "Node.js, Express.js",
-      integration: "SAP ABAP B2B Synchronization",
-      database: "MongoDB"
+      integration: "SAP ABAP Integration",
+      database: "MongoDB Atlas",
+      tools: "VS Code, Postman"
     },
-    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "SAP ABAP", "REST APIs", "JWT"],
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB Atlas", "SAP ABAP", "REST APIs", "JWT", "VS Code", "Postman"],
     metrics: [
       { label: "Integration", val: "SAP ABAP" },
-      { label: "Database", val: "MongoDB" },
-      { label: "Architecture", val: "RESTful" }
+      { label: "Database", val: "MongoDB Atlas" },
+      { label: "Tools", val: "VS Code, Postman" }
     ],
     color: "from-sky-600 to-indigo-600"
   },
