@@ -55,16 +55,17 @@ export const skillsData = {
       { name: "JWT & RBAC Security", level: "Advanced", tags: ["Role Hierarchy", "Tokens", "Auth Guards"] },
       { name: "Cron Jobs & Schedulers", level: "Advanced", tags: ["Daily Archival", "Rankings", "Workers"] },
       { name: "Serverless Functions", level: "Advanced", tags: ["Event-Driven", "Cloud Functions"] },
-      { name: "SAP ABAP Integration", level: "Familiar", tags: ["B2B Tickets", "Order Sync"] }
+      { name: "SAP ABAP & Enterprise Integration", level: "Advanced", tags: ["RFCs", "BAPIs", "IDocs", "SOAMANAGER", "CPI", "JCo"] }
     ]
   },
   databases: {
-    title: "Databases & ORMs",
+    title: "Databases & Enterprise Data",
     icon: "Database",
-    description: "Relational, document, and caching layers optimized for high query velocity.",
+    description: "Relational, document, in-memory ERP, and caching layers optimized for high velocity.",
     skills: [
       { name: "PostgreSQL", level: "Advanced", tags: ["Relational", "Indexing", "Complex Queries"] },
       { name: "MongoDB & MongoDB Atlas", level: "Expert", tags: ["Cloud Clusters", "Aggregation", "Schema Design", "Mongoose"] },
+      { name: "SAP HANA & Oracle DB", level: "Advanced", tags: ["In-Memory ERP", "Enterprise Data", "SQL"] },
       { name: "Prisma ORM", level: "Advanced", tags: ["Type-Safe Queries", "Migrations"] },
       { name: "Redis", level: "Advanced", tags: ["Queue Management", "Caching", "Pub/Sub"] },
       { name: "MySQL", level: "Intermediate", tags: ["Joins", "Transactions", "Relational"] }
@@ -154,19 +155,20 @@ export const experienceData = [
     tech: ["React.js", "Node.js", "Express.js", "PostgreSQL", "Python", "YOLOv11", "BoT-SORT", "Redis", "Cron Jobs", "RBAC"]
   },
   {
-    role: "Backend Developer",
+    role: "Backend & SAP Integration Developer",
     company: "Synozon Technology",
     location: "India",
     period: "Aug 2023 -- Oct 2024",
     type: "Internship",
     highlights: [
-      "Developed full-stack CRM modules for customer interaction tracking and relationship management using React.js, Node.js, and MongoDB Atlas.",
-      "Created secure backend REST APIs using Node.js and Express.js for orders, alerts, authentication, and customer profiles.",
-      "Integrated SAP ABAP for enterprise-level ticket synchronization and business process automation.",
-      "Implemented responsive React.js user interfaces for seamless CRM operations.",
-      "Designed backend architecture for efficient data handling and synchronization, utilizing VS Code and Postman for development and testing."
+      "Engineered an enterprise-grade CRM engine for complex customer interaction tracking, account hierarchy management, and real-time backend synchronization.",
+      "Built a high-throughput integration layer connecting front-end CRM platforms (Salesforce / SAP Service Cloud) with core SAP ERP, automating business partners, sales orders, and credit limits.",
+      "Exposed legacy ABAP database tables into secure REST/SOAP web services using SOAMANAGER and middleware (SAP CPI, JCo, MuleSoft), reducing end-to-end data latency from hours to real-time.",
+      "Developed custom ABAP Remote Function Calls (RFCs), BAPIs (SE37), ALE/IDocs (WE20/WE21), and User Exits/BAdIs for transaction processing.",
+      "Wrote custom JavaScript controllers, triggers, and Lightning Web Components (LWC) for event-driven API calls, reducing manual data-entry errors by 40% and delivering a unified 360° customer view.",
+      "Managed multi-tier data persistence across SAP HANA, Oracle DB, and MongoDB Atlas with Postman test suites, VS Code, and OAuth 2.0 API security."
     ],
-    tech: ["Node.js", "Express.js", "React.js", "MongoDB Atlas", "SAP ABAP", "VS Code", "Postman", "REST APIs", "JWT"]
+    tech: ["ABAP", "SAP ERP", "SOAMANAGER", "BAPI / IDoc", "SAP CPI", "SAP JCo", "MuleSoft", "JavaScript / LWC", "Salesforce", "SAP HANA", "Oracle DB", "MongoDB Atlas", "Postman", "VS Code", "OAuth 2.0"]
   },
   {
     role: "Embedded Developer / Jr. Software Engineer",
@@ -316,33 +318,54 @@ export const projectsData = [
   {
     id: "crm-system",
     title: "CRM -- Customer Relationship Management",
-    subtitle: "Full-Stack Enterprise CRM with SAP ABAP Integration",
+    subtitle: "Enterprise CRM Engine & Real-Time SAP ERP Integration Layer",
     category: "Full Stack Web",
-    badge: "Enterprise CRM",
+    badge: "Enterprise CRM & SAP Integration",
     period: "2023 -- 2024",
     client: "Synozon Technology",
     description:
-      "Full-stack CRM platform for customer interaction tracking, relationship management, and enterprise-level SAP ABAP integration.",
+      "Designed and implemented a full-stack, enterprise-grade Customer Relationship Management (CRM) engine tailored for complex customer interaction tracking, account hierarchy management, and real-time backend synchronization. Engineered a high-throughput integration layer linking the front-end CRM platform with a core SAP ERP backend system. The solution automates data flows for business partners, sales order pipelines, and account financial limits, effectively eliminating cross-department data silos, reducing manual data-entry errors by 40%, and delivering a unified 360-degree customer view for sales and support operations.",
     features: [
-      "Developed full-stack CRM platform using React.js, Node.js, and MongoDB Atlas",
-      "Created REST APIs for orders, alerts, authentication, and customer profiles",
-      "Integrated SAP ABAP for enterprise-level order tracking and business process automation",
-      "Implemented secure authentication and notification modules",
-      "Designed backend architecture for efficient data handling and synchronization",
-      "Developed and tested full API suite using VS Code and Postman"
+      "Exposed legacy ABAP database tables into secure REST/SOAP web services using SOAMANAGER and middleware, reducing end-to-end data latency from hours to real-time.",
+      "Engineered a high-throughput integration layer linking the front-end CRM platform with a core SAP ERP backend system.",
+      "Automated critical data flows for business partners, sales order pipelines, and account financial credit limits.",
+      "Developed custom Remote Function Calls (RFCs), Business Application Programming Interfaces (BAPIs), ALE/IDoc extensions, and User Exits/BAdIs for transaction processing in ABAP.",
+      "Wrote custom JavaScript controllers, triggers, and Lightning Web Components (LWC) for advanced front-end customer interaction tracking and event-driven API calls.",
+      "Integrated SAP Integration Suite (Cloud Platform Integration - CPI), SAP Java Connector (JCo), MuleSoft Anypoint Platform, and SOAMANAGER with comprehensive Postman test collections.",
+      "Leveraged SAP GUI customizing tools and Transaction Codes including SE37 (BAPIs), WE20/WE21 (IDocs), SPROXY, and BD64.",
+      "Eliminated cross-department data silos and reduced manual data-entry errors by 40%, delivering a unified 360-degree customer view for sales and support operations.",
+      "Managed multi-tier data persistence across SAP HANA, Oracle DB, and MongoDB Atlas with secure API gateways and OAuth 2.0 identity providers."
     ],
     architecture: {
-      frontend: "React.js, Responsive UI",
-      backend: "Node.js, Express.js",
-      integration: "SAP ABAP Integration",
-      database: "MongoDB Atlas",
-      tools: "VS Code, Postman"
+      crmPlatforms: "Salesforce Sales & Service Cloud / SAP Service Cloud (Customer Experience Suite)",
+      middleware: "SAP Integration Suite (CPI), SAP Java Connector (JCo), MuleSoft Anypoint Platform, SOAMANAGER, Postman",
+      sapCustomizing: "SAP GUI, Transaction Codes (SE37 for BAPIs, WE20/WE21 for IDocs, SPROXY, BD64)",
+      databaseInfra: "SAP HANA, Oracle DB, MongoDB Atlas, Secure API Gateways, OAuth 2.0 Identity Providers",
+      languages: "ABAP (RFCs, BAPIs, ALE/IDocs, User Exits/BAdIs) & JavaScript (LWC, Controllers, Triggers)"
     },
-    tech: ["React.js", "Node.js", "Express.js", "MongoDB Atlas", "SAP ABAP", "REST APIs", "JWT", "VS Code", "Postman"],
+    tech: [
+      "ABAP",
+      "SAP ERP",
+      "SOAMANAGER",
+      "BAPIs (SE37)",
+      "IDocs (WE20/WE21)",
+      "SAP Integration Suite (CPI)",
+      "SAP Java Connector (JCo)",
+      "MuleSoft",
+      "JavaScript (LWC)",
+      "Salesforce Cloud",
+      "SAP Service Cloud",
+      "SAP HANA",
+      "Oracle DB",
+      "MongoDB Atlas",
+      "Postman",
+      "OAuth 2.0"
+    ],
     metrics: [
-      { label: "Integration", val: "SAP ABAP" },
-      { label: "Database", val: "MongoDB Atlas" },
-      { label: "Tools", val: "VS Code, Postman" }
+      { label: "Data Latency", val: "Hours to Real-Time" },
+      { label: "Manual Data Errors", val: "Reduced by 40%" },
+      { label: "Integration Layer", val: "SOAMANAGER & CPI" },
+      { label: "Customer View", val: "Unified 360° View" }
     ],
     color: "from-sky-600 to-indigo-600"
   },
@@ -573,32 +596,32 @@ export const systemPipelines = [
   {
     id: "crm-flow",
     title: "CRM Lifecycle & SAP ABAP Integration Pipeline",
-    description: "Enterprise customer interaction workflow with Node.js REST APIs, MongoDB Atlas, and SAP ABAP integration.",
+    description: "Enterprise CRM engine linking Salesforce / SAP Service Cloud with core SAP ERP via SOAMANAGER and middleware.",
     steps: [
       {
         step: "01",
-        title: "Customer Interaction Intake",
-        desc: "Captures customer inquiries, orders, and relationship histories via responsive React.js dashboard interfaces."
+        title: "Customer Interaction & LWC Event Intake",
+        desc: "Captures account interactions, business partner inquiries, and sales pipeline updates via custom JavaScript controllers and Lightning Web Components (LWC)."
       },
       {
         step: "02",
-        title: "Express REST API Handlers",
-        desc: "Processes customer requests with robust middleware validation, error handling, and secure JWT authentication."
+        title: "Middleware & API Gateway Orchestration",
+        desc: "SAP Integration Suite (CPI), SAP Java Connector (JCo), and MuleSoft authenticate requests using OAuth 2.0 and route event-driven sales order payloads."
       },
       {
         step: "03",
-        title: "SAP ABAP Integration",
-        desc: "Executes enterprise integration protocols with SAP ABAP to synchronize business tickets and order tracking."
+        title: "SOAMANAGER Real-Time Web Service Exposure",
+        desc: "Exposes legacy ABAP database tables into secure REST/SOAP web services using SOAMANAGER, reducing end-to-end data latency from hours to real-time."
       },
       {
         step: "04",
-        title: "MongoDB Atlas Cloud Storage",
-        desc: "Stores customer profiles, activity alerts, and order metadata in scalable MongoDB Atlas document collections."
+        title: "SAP ERP Processing (BAPIs, RFCs & IDocs)",
+        desc: "Executes enterprise business logic in SAP ERP using custom BAPIs (SE37), Remote Function Calls (RFCs), ALE/IDocs (WE20/WE21), and User Exits/BAdIs."
       },
       {
         step: "05",
-        title: "VS Code & Postman Testing",
-        desc: "Full automated endpoint testing with Postman environments and collections to guarantee 99.9% API reliability."
+        title: "Unified 360° Data Sync (SAP HANA, Oracle & MongoDB)",
+        desc: "Synchronizes business partner master data, sales order pipelines, and account credit limits across SAP HANA, Oracle DB, and MongoDB Atlas—reducing manual errors by 40%."
       }
     ]
   },

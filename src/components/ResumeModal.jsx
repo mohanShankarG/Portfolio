@@ -189,7 +189,7 @@ export default function ResumeModal({ isOpen, onClose }) {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
               <div>
-                <strong className="text-white">Programming Languages:</strong> JavaScript, Python, C, C++, Embedded C
+                <strong className="text-white">Programming Languages:</strong> JavaScript, Python, ABAP, C, C++, Embedded C
               </div>
               <div>
                 <strong className="text-white">Frontend Technologies:</strong> React.js, Angular.js, HTML5, CSS3, Material UI, Axios, Vite, Responsive Web Design
@@ -198,7 +198,7 @@ export default function ResumeModal({ isOpen, onClose }) {
                 <strong className="text-white">Backend Technologies:</strong> Node.js, Express.js, RESTful APIs, JWT Authentication, Serverless Functions, Cron Jobs, RBAC
               </div>
               <div>
-                <strong className="text-white">Databases:</strong> MongoDB, MongoDB Atlas, PostgreSQL, MySQL, Redis
+                <strong className="text-white">Databases & Enterprise Data:</strong> MongoDB Atlas, PostgreSQL, SAP HANA, Oracle DB, MySQL, Redis
               </div>
               <div>
                 <strong className="text-white">AI/ML & Computer Vision:</strong> Python, YOLOv8, YOLOv11, BoT-SORT, OpenCV, Object Detection, Tracking, LabelImg, Label Studio
@@ -207,7 +207,7 @@ export default function ResumeModal({ isOpen, onClose }) {
                 <strong className="text-white">Cloud & Deployment:</strong> Vercel, Cloudinary, Render
               </div>
               <div>
-                <strong className="text-white">Tools & Technologies:</strong> VS Code, Postman, Git, GitHub, API Testing, Prisma ORM, Multer, Sharp, SAP ABAP Integration
+                <strong className="text-white">Enterprise Tools & Middleware:</strong> SAP Integration Suite (CPI), SAP JCo, MuleSoft, SOAMANAGER, SAP GUI (SE37, WE20/WE21, SPROXY), Salesforce LWC, VS Code, Postman, Git, GitHub, Prisma ORM
               </div>
               <div>
                 <strong className="text-white">Embedded Systems, Robotics & Healthcare IoT:</strong> Raspberry Pi 5 & 4, ROS, WhatsApp Bot, Telegram Bot API, LiDAR SLAM, MAX30102 (SpO2/Pulse), DHT22, MPU6050 IMU, MQTT, Speech Processing (TTS), IR/Ultrasonic Sensors, Auto-Stop Safety
