@@ -216,8 +216,8 @@ export default function Hero({ onOpenResume }) {
                       <div className="text-slate-400 text-[11px]">Nirupaa Store with Sharp & Cloudinary</div>
                     </div>
                     <div className="p-3 rounded-xl bg-slate-950/60 border border-slate-800/80">
-                      <div className="font-semibold text-amber-300 mb-0.5">Robotics & IoT</div>
-                      <div className="text-slate-400 text-[11px]">Sensor Integration & Assistive Wheelchair</div>
+                      <div className="font-semibold text-amber-300 mb-0.5">RPi 5 & Cloud SOS</div>
+                      <div className="text-slate-400 text-[11px]">Wheelchair Alert Bot (Ambulance/Police/Family)</div>
                     </div>
                   </div>
                 </div>
@@ -265,7 +265,7 @@ export default function Hero({ onOpenResume }) {
             {[
               "React.js", "Node.js", "Express.js", "PostgreSQL", "MongoDB", 
               "Python", "PyTorch", "YOLOv11", "OpenCV", "Redis", 
-              "Raspberry Pi 4/5", "ESP32 / ESP8266", "Arduino",
+              "Raspberry Pi 5", "Telegram Bot API", "WhatsApp Bot", "Cloud Emergency Alerts",
               "Prisma ORM", "Docker", "Git/GitHub", "Material UI", "Vite"
             ].map((tech) => (
               <span

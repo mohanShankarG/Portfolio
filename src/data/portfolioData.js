@@ -96,16 +96,16 @@ export const skillsData = {
     ]
   },
   embedded: {
-    title: "Embedded & Hardware",
+    title: "Embedded & Cloud IoT",
     icon: "Cpu",
-    description: "Hardware-software integration, microcontroller boards, IoT sensors, and robotics automation.",
+    description: "Raspberry Pi 5 computing, Cloud Telegram/WhatsApp emergency bots, sensors, and robotics automation.",
     skills: [
-      { name: "Raspberry Pi 4 & Raspberry Pi 5", level: "Expert", tags: ["Linux SBC", "GPIO", "Vision Edge", "Python"] },
-      { name: "ESP32 & ESP8266 Boards", level: "Expert", tags: ["WiFi/BLE", "IoT Nodes", "Firmware", "MQTT"] },
-      { name: "Arduino & Microcontroller Boards", level: "Advanced", tags: ["Firmware", "PWM Motor Control", "Timers"] },
-      { name: "Embedded C & C/C++", level: "Advanced", tags: ["Low-Level", "Memory Optimization", "Registers"] },
+      { name: "Raspberry Pi 5", level: "Expert", tags: ["Linux SBC", "GPIO", "Edge AI", "Python Core"] },
+      { name: "Cloud Emergency Alerting Bots", level: "Expert", tags: ["Telegram Bot API", "WhatsApp Bot", "Webhook Alerts", "SOS Dispatch"] },
+      { name: "Emergency Contact Automation", level: "Expert", tags: ["Ambulance (EMS)", "Family Members", "Police Station", "GPS Telemetry"] },
+      { name: "Embedded C & C/C++", level: "Advanced", tags: ["Low-Level", "Memory Optimization", "Hardware Control"] },
       { name: "Sensor Integration & Hardware Automation", level: "Advanced", tags: ["Ultrasonic", "IR Sensors", "Relays", "Actuators"] },
-      { name: "Robotics & Embedded System Design", level: "Advanced", tags: ["Autonomous Navigation", "Obstacle Avoidance"] }
+      { name: "Robotics & Assistive Mobility Design", level: "Advanced", tags: ["Autonomous Navigation", "Obstacle Avoidance", "Auto-Stop"] }
     ]
   }
 };
@@ -176,11 +176,11 @@ export const experienceData = [
     type: "Full-Time",
     highlights: [
       "Worked on Electric Vehicle (EV) prototype design integrating embedded systems, AI, and battery telemetry.",
-      "Developed assistive robotics projects including the Blind Man Wheelchair (obstacle detection & navigation) and Auto Robo Assistant.",
-      "Worked with Raspberry Pi, ESP32, ESP8266, Arduino, Embedded C, Python, C++, AI/ML, and sensor systems.",
-      "Collaborated on hardware integration, sensor systems (ultrasonic, IR), motor drivers, and automated safety mechanisms."
+      "Developed assistive robotics projects including the Blind Man Wheelchair (obstacle detection & autonomous stopping) and Auto Robo Assistant.",
+      "Engineered cloud emergency notification bots (Telegram Bot & WhatsApp Bot) powered by Raspberry Pi 5 to automatically dispatch real-time SOS alerts to Ambulance (EMS), family members, and police stations.",
+      "Collaborated on hardware integration, sensor systems (ultrasonic, IR), motor drivers, Embedded C, Python, and automated safety mechanisms."
     ],
-    tech: ["Raspberry Pi 4/5", "ESP32", "ESP8266", "Arduino", "Embedded C", "C/C++", "Python", "Sensors", "Robotics"]
+    tech: ["Raspberry Pi 5", "Telegram Bot API", "WhatsApp Bot", "Cloud Emergency Alerts", "Embedded C", "C/C++", "Python", "Sensors", "Robotics"]
   }
 ];
 
@@ -345,30 +345,33 @@ export const projectsData = [
   },
   {
     id: "embedded-suite",
-    title: "Assistive Robotics & Embedded IoT Systems",
-    subtitle: "Raspberry Pi, ESP32/ESP8266, Arduino & AI Integration",
+    title: "Assistive Robotics & Cloud Emergency SOS System",
+    subtitle: "Raspberry Pi 5 & Cloud Emergency Bots (Telegram / WhatsApp)",
     category: "Embedded / IoT",
     badge: "Hardware & Robotics",
     period: "2021 -- 2023",
     client: "Pantech R&D / Innovation Showcase",
     description:
-      "A suite of autonomous robotic prototypes and assistive mobility systems integrating Raspberry Pi 4/5, ESP32, ESP8266, Arduino boards, sensor arrays, and motor driver automation.",
+      "An AI-powered assistive mobility and autonomous robotics platform driven exclusively by Raspberry Pi 5. Integrates real-time sensor monitoring, automated motor control, and cloud emergency notification bots (Telegram Bot & WhatsApp Bot) that instantly dispatch SOS alerts with live telemetry and GPS coordinates to Ambulance services, Family Members, and Police Stations during emergencies or falls.",
     features: [
-      "Blind Man Wheelchair: AI-enabled wheelchair to assist visually impaired users through obstacle detection and navigation, ultrasonic & IR sensors, and automatic stopping",
-      "Auto Robo Assistant: Autonomous robot using embedded sensors and AI techniques, obstacle avoidance, auto-stop, and collision prevention",
+      "Blind Man Wheelchair: AI-enabled wheelchair powered by Raspberry Pi 5 with ultrasonic and IR sensors for obstacle detection, autonomous collision avoidance, and automatic emergency stopping",
+      "Cloud Emergency SOS Dispatch: Integrated Telegram Bot & WhatsApp Bot cloud integration that automatically triggers instant emergency alerts with location coordinates to the Ambulance (EMS), Family Members, and Police Station upon fall/impact or distress trigger",
+      "Auto Robo Assistant: Autonomous robot using Raspberry Pi 5 embedded sensors and AI techniques for obstacle avoidance, motion control, and collision prevention",
       "EV Vehicle Prototype: Design integrating embedded systems and AI, microcontroller battery monitoring, and PWM motor control",
-      "Hardware Boards: Raspberry Pi 4 & 5, ESP32, ESP8266, Arduino development boards with Embedded C and Python"
+      "Single Board Computer: Dedicated high-performance Raspberry Pi 5 running Linux SBC architecture with Embedded C and Python automation"
     ],
     architecture: {
-      hardware: "Raspberry Pi 4/5, ESP32, ESP8266, Arduino Uno/Mega",
-      firmware: "Embedded C, C++, Python",
-      sensors: "Ultrasonic, IR, Gyro, Relays, Motor Drivers"
+      hardware: "Raspberry Pi 5 (Broadcom 64-bit Quad-Core SBC)",
+      cloudAlerts: "Telegram Bot API, WhatsApp Bot (Cloud Webhooks)",
+      emergencyContacts: "Ambulance (EMS), Family Members, Police Station",
+      firmware: "Python, Embedded C, C++, Linux Services",
+      sensors: "Ultrasonic, IR, Gyro/Accelerometer, Relays, Motor Drivers"
     },
-    tech: ["Raspberry Pi 4/5", "ESP32", "ESP8266", "Arduino", "Embedded C", "C/C++", "Python", "Sensors", "Robotics"],
+    tech: ["Raspberry Pi 5", "Telegram Bot API", "WhatsApp Bot", "Cloud Emergency Alerts", "Embedded C", "C/C++", "Python", "Sensors", "Robotics"],
     metrics: [
-      { label: "Boards", val: "RPi 4/5, ESP32/8266" },
-      { label: "Key Projects", val: "Wheelchair & Robo" },
-      { label: "Core Lang", val: "Embedded C / Python" }
+      { label: "Core SBC", val: "Raspberry Pi 5" },
+      { label: "Cloud Alerts", val: "Telegram / WhatsApp" },
+      { label: "Emergency Dispatch", val: "Ambulance, Family, Police" }
     ],
     color: "from-teal-600 to-indigo-600"
   }

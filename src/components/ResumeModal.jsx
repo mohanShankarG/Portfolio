@@ -210,7 +210,7 @@ export default function ResumeModal({ isOpen, onClose }) {
                 <strong className="text-white">Tools & Technologies:</strong> Git, GitHub, Postman, API Testing, Prisma ORM, Multer, Sharp, SAP ABAP Integration
               </div>
               <div>
-                <strong className="text-white">Embedded Systems & Boards:</strong> Raspberry Pi 4 & 5, ESP8266, ESP32, Arduino, Sensor Integration, Robotics, Motor Control, Embedded System Design
+                <strong className="text-white">Embedded Systems & Cloud IoT:</strong> Raspberry Pi 5, Telegram Bot API, WhatsApp Bot (Ambulance, Family, Police SOS Alerts), Sensor Integration, Robotics, Motor Control, Embedded System Design
               </div>
             </div>
           </div>
