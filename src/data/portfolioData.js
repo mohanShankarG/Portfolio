@@ -444,6 +444,134 @@ export const systemPipelines = [
         desc: "Persists deduplicated inventory records with highway chainage markers for GIS reporting & client dashboards."
       }
     ]
+  },
+  {
+    id: "nirupaa-flow",
+    title: "Nirupaa E-Commerce Order & Media Pipeline",
+    description: "Full-stack fashion retail lifecycle: product catalog, JWT auth, cart checkout, and automated Sharp/Cloudinary media compression.",
+    steps: [
+      {
+        step: "01",
+        title: "Catalog & Filtering",
+        desc: "Customers query product catalogs with real-time category, size, price, and clothing taxonomy filters via React."
+      },
+      {
+        step: "02",
+        title: "Cart & JWT Authentication",
+        desc: "Manages persistent cart state and enforces secure JWT authentication and RBAC for customers and admin dashboard."
+      },
+      {
+        step: "03",
+        title: "Order Flow & MongoDB Atlas",
+        desc: "Validates order items, shipping details, and transactions; persists records to MongoDB Atlas cloud database."
+      },
+      {
+        step: "04",
+        title: "Multer & Sharp Optimization",
+        desc: "Product image uploads are dynamically resized, compressed, and converted to modern WebP format via Sharp and Multer."
+      },
+      {
+        step: "05",
+        title: "Cloudinary CDN & Vercel Deploy",
+        desc: "Optimized media assets stored on Cloudinary CDN for instant edge delivery with Vercel frontend and backend hosting."
+      }
+    ]
+  },
+  {
+    id: "tracking-flow",
+    title: "BoT-SORT Vehicle Tracking & Pan-India Traffic Pipeline",
+    description: "Real-time highway traffic video processing pipeline identifying high-density roads across India with multi-object trajectory tracking.",
+    steps: [
+      {
+        step: "01",
+        title: "OpenCV Stream Reader",
+        desc: "Ingests highway camera video feeds, normalizes frame rates, and performs preprocessing filters in Python."
+      },
+      {
+        step: "02",
+        title: "YOLO Object Detection",
+        desc: "Deep learning models detect vehicle classes (cars, buses, trucks, bikes) with high confidence bounding boxes."
+      },
+      {
+        step: "03",
+        title: "BoT-SORT Multi-Object Tracking",
+        desc: "Applies motion compensation and Kalman filtering to maintain persistent vehicle IDs across occlusions and speeds."
+      },
+      {
+        step: "04",
+        title: "Pan-India Density Analytics",
+        desc: "Analyzes vehicular volume, congestion trends, and flow rates to pinpoint high-density highway corridors across India."
+      },
+      {
+        step: "05",
+        title: "Dataset Curation & Annotation",
+        desc: "Utilizes LabelImg and Label Studio to curate real-world traffic edge cases for ongoing model accuracy training."
+      }
+    ]
+  },
+  {
+    id: "crm-flow",
+    title: "CRM Lifecycle & SAP ABAP Integration Pipeline",
+    description: "Enterprise customer interaction workflow with Node.js REST APIs, MongoDB Atlas, and SAP ABAP integration.",
+    steps: [
+      {
+        step: "01",
+        title: "Customer Interaction Intake",
+        desc: "Captures customer inquiries, orders, and relationship histories via responsive React.js dashboard interfaces."
+      },
+      {
+        step: "02",
+        title: "Express REST API Handlers",
+        desc: "Processes customer requests with robust middleware validation, error handling, and secure JWT authentication."
+      },
+      {
+        step: "03",
+        title: "SAP ABAP Integration",
+        desc: "Executes enterprise integration protocols with SAP ABAP to synchronize business tickets and order tracking."
+      },
+      {
+        step: "04",
+        title: "MongoDB Atlas Cloud Storage",
+        desc: "Stores customer profiles, activity alerts, and order metadata in scalable MongoDB Atlas document collections."
+      },
+      {
+        step: "05",
+        title: "VS Code & Postman Testing",
+        desc: "Full automated endpoint testing with Postman environments and collections to guarantee 99.9% API reliability."
+      }
+    ]
+  },
+  {
+    id: "embedded-flow",
+    title: "Raspberry Pi 5 Assistive Robotics & Cloud SOS Pipeline",
+    description: "Autonomous obstacle detection, motor safety, and cloud emergency dispatch to Ambulance, Family, and Police.",
+    steps: [
+      {
+        step: "01",
+        title: "Ultrasonic & IR Scanning",
+        desc: "Raspberry Pi 5 continuously samples ultrasonic and IR sensor arrays to measure surrounding obstacle proximity in real time."
+      },
+      {
+        step: "02",
+        title: "Autonomous Collision Avoidance",
+        desc: "Embedded control algorithms trigger automatic motor deceleration and emergency stopping when obstacles are detected."
+      },
+      {
+        step: "03",
+        title: "Distress / Fall Detection",
+        desc: "Onboard sensors or manual SOS button triggers emergency state detection on the wheelchair or assistive robot."
+      },
+      {
+        step: "04",
+        title: "Cloud Bot Webhook Trigger",
+        desc: "Raspberry Pi 5 immediately sends cloud webhook dispatches to Telegram Bot API and WhatsApp Cloud Bot with live GPS coordinates."
+      },
+      {
+        step: "05",
+        title: "Multi-Contact SOS Dispatch",
+        desc: "Simultaneous emergency SOS alerts delivered instantly to 🚑 Ambulance (EMS), 👨‍👩‍👧 Family Members, and 🚓 Police Station."
+      }
+    ]
   }
 ];
 

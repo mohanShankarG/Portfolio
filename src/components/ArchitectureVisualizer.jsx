@@ -7,10 +7,14 @@ import {
   Clock, 
   Database, 
   CheckCircle2, 
-  Sparkles,
-  Server,
-  Zap,
-  Layers
+  Sparkles, 
+  Server, 
+  Zap, 
+  Layers,
+  ShoppingBag,
+  Activity,
+  Briefcase,
+  Radio
 } from 'lucide-react';
 import { systemPipelines } from '../data/portfolioData';
 
@@ -19,6 +23,25 @@ export default function ArchitectureVisualizer() {
   const [activeStepIndex, setActiveStepIndex] = useState(0);
 
   const activePipeline = systemPipelines.find((p) => p.id === activePipelineId) || systemPipelines[0];
+
+  const getPipelineIcon = (id) => {
+    switch (id) {
+      case 'gujmarg-flow':
+        return <ShieldCheck size={18} />;
+      case 'vision-flow':
+        return <Eye size={18} />;
+      case 'nirupaa-flow':
+        return <ShoppingBag size={18} />;
+      case 'tracking-flow':
+        return <Activity size={18} />;
+      case 'crm-flow':
+        return <Briefcase size={18} />;
+      case 'embedded-flow':
+        return <Radio size={18} />;
+      default:
+        return <Layers size={18} />;
+    }
+  };
 
   return (
     <section id="architecture" className="py-24 relative bg-slate-950/60 border-t border-b border-slate-800/80">
@@ -34,12 +57,12 @@ export default function ArchitectureVisualizer() {
             Production <span className="text-cyan-400">Architecture & Workflow</span> Visualizer
           </h2>
           <p className="text-slate-400 text-sm sm:text-base">
-            Inspect the live data flows and logic pipelines engineered for government civic operations and deep learning computer vision.
+            Inspect the live data flows and logic pipelines engineered for government civic operations, computer vision, e-commerce, CRM, and cloud IoT.
           </p>
         </div>
 
         {/* Pipeline Selector Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-12">
           {systemPipelines.map((pipe) => (
             <button
               key={pipe.id}
@@ -47,13 +70,13 @@ export default function ArchitectureVisualizer() {
                 setActivePipelineId(pipe.id);
                 setActiveStepIndex(0);
               }}
-              className={`flex items-center gap-2.5 px-5 py-3 rounded-2xl text-xs sm:text-sm font-semibold transition-all ${
+              className={`flex items-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 rounded-2xl text-xs sm:text-sm font-semibold transition-all ${
                 activePipelineId === pipe.id
-                  ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg shadow-cyan-600/25 border border-cyan-400/40'
+                  ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg shadow-cyan-600/25 border border-cyan-400/40 scale-[1.02]'
                   : 'bg-slate-900/80 text-slate-400 hover:text-white border border-slate-800 hover:border-slate-700'
               }`}
             >
-              {pipe.id.includes('gujmarg') ? <ShieldCheck size={18} /> : <Eye size={18} />}
+              {getPipelineIcon(pipe.id)}
               <span>{pipe.title}</span>
             </button>
           ))}
@@ -64,15 +87,16 @@ export default function ArchitectureVisualizer() {
           
           {/* Pipeline Info */}
           <div className="space-y-1">
-            <h3 className="text-xl sm:text-2xl font-bold text-white">
-              {activePipeline.title}
+            <h3 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2.5">
+              <span className="text-cyan-400">{getPipelineIcon(activePipeline.id)}</span>
+              <span>{activePipeline.title}</span>
             </h3>
             <p className="text-xs sm:text-sm text-slate-400">
               {activePipeline.description}
             </p>
           </div>
 
-          {/* Stepper Steps (Horizontally scrollable on mobile) */}
+          {/* Stepper Steps (Responsive Grid) */}
           <div className="grid grid-cols-1 sm:grid-cols-5 gap-3">
             {activePipeline.steps.map((st, idx) => (
               <button
@@ -80,7 +104,7 @@ export default function ArchitectureVisualizer() {
                 onClick={() => setActiveStepIndex(idx)}
                 className={`p-4 rounded-2xl border text-left transition-all ${
                   activeStepIndex === idx
-                    ? 'bg-cyan-950/60 border-cyan-500 shadow-md shadow-cyan-500/10'
+                    ? 'bg-cyan-950/60 border-cyan-500 shadow-md shadow-cyan-500/10 scale-[1.02]'
                     : 'bg-slate-950/50 border-slate-800/80 hover:border-slate-700 text-slate-400'
                 }`}
               >
@@ -121,23 +145,23 @@ export default function ArchitectureVisualizer() {
             </p>
 
             {/* Stage Indicators */}
-            <div className="flex items-center justify-between pt-4 border-t border-slate-800/80 text-xs text-slate-400">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-4 border-t border-slate-800/80 text-xs text-slate-400">
               <div className="flex items-center gap-2">
                 <CheckCircle2 size={15} className="text-emerald-400" />
-                <span>Production Verified Workflow</span>
+                <span>Production Verified Workflow Architecture</span>
               </div>
               <div className="flex items-center gap-2">
                 <button
                   disabled={activeStepIndex === 0}
                   onClick={() => setActiveStepIndex((prev) => Math.max(0, prev - 1))}
-                  className="px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 disabled:opacity-30 disabled:pointer-events-none transition-colors"
+                  className="px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 disabled:opacity-30 disabled:pointer-events-none transition-colors font-medium"
                 >
                   Previous Stage
                 </button>
                 <button
                   disabled={activeStepIndex === activePipeline.steps.length - 1}
                   onClick={() => setActiveStepIndex((prev) => Math.min(activePipeline.steps.length - 1, prev + 1))}
-                  className="px-3 py-1 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white font-medium disabled:opacity-30 disabled:pointer-events-none transition-colors"
+                  className="px-3.5 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white font-medium disabled:opacity-30 disabled:pointer-events-none transition-colors"
                 >
                   Next Stage
                 </button>
@@ -152,4 +176,3 @@ export default function ArchitectureVisualizer() {
     </section>
   );
 }
-
