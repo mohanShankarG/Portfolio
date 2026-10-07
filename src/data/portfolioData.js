@@ -261,23 +261,24 @@ export const projectsData = [
       "A scalable fashion e-commerce platform for men's and women's clothing. Offers seamless catalog browsing, dynamic price filtering, cart state management, secure checkout flows, and a dedicated admin portal for product and order lifecycle management.",
     features: [
       "Modern responsive React storefront with product browsing, filtering, cart, and checkout",
-      "Robust RESTful API architecture built on Node.js and Express.js with MongoDB",
+      "Implemented secure JWT-based authentication and admin dashboard",
+      "Backend Skills: Node.js, Express.js, REST APIs, JWT Authentication, and RBAC",
       "Automated media optimization pipeline using Multer, Sharp (dynamic image resizing), and Cloudinary CDN storage",
-      "Secure JWT-based authentication and protected admin dashboards for inventory oversight",
       "Production deployment architecture running frontend and backend on Vercel"
     ],
     architecture: {
-      frontend: "React.js, Tailwind CSS, Responsive Cart State",
-      backend: "Node.js, Express.js, REST APIs",
+      frontend: "React.js, Tailwind CSS, Responsive Cart State, Admin Dashboard",
+      backend: "Node.js, Express.js, REST APIs, JWT Authentication, RBAC",
+      security: "JWT Authentication, Role-Based Access Control (RBAC)",
       database: "MongoDB Atlas",
       media: "Multer, Sharp compression, Cloudinary Storage CDN",
       deploy: "Vercel"
     },
-    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Cloudinary", "Multer", "Sharp", "Vercel"],
+    tech: ["React.js", "Node.js", "Express.js", "REST APIs", "JWT", "RBAC", "MongoDB Atlas", "Cloudinary", "Multer", "Sharp", "Vercel"],
     metrics: [
-      { label: "Image Optimization", val: "Sharp & Cloudinary" },
-      { label: "Deployment", val: "Vercel" },
-      { label: "Architecture", val: "MERN Stack" }
+      { label: "Auth & Security", val: "JWT & RBAC" },
+      { label: "Backend", val: "Node & Express APIs" },
+      { label: "Deployment", val: "Vercel" }
     ],
     color: "from-purple-600 to-pink-600"
   },
