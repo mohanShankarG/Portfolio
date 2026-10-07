@@ -11,7 +11,9 @@ import {
   Clock, 
   Sparkles,
   MessageSquare,
-  ExternalLink
+  ExternalLink,
+  Loader2,
+  AlertCircle
 } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
@@ -19,6 +21,8 @@ export default function Contact() {
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [copiedPhone, setCopiedPhone] = useState(false);
   const [currentTime, setCurrentTime] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState(null); // { type: 'success' | 'error', message: '' }
   
   // Form state
   const [formData, setFormData] = useState({
@@ -27,7 +31,6 @@ export default function Contact() {
     subject: '',
     message: ''
   });
-  const [isSent, setIsSent] = useState(false);
 
   // Live IST Clock (Indian Standard Time)
   useEffect(() => {
@@ -58,17 +61,60 @@ export default function Contact() {
     setTimeout(() => setCopiedPhone(false), 2000);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Open default mail client with encoded parameters
-    const mailtoUrl = `mailto:${personalInfo.email}?subject=${encodeURIComponent(
-      formData.subject || `Opportunity Inquiry from ${formData.name}`
+  const openGmailCompose = () => {
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(personalInfo.email)}&su=${encodeURIComponent(
+      formData.subject || `Opportunity Inquiry from ${formData.name || 'Visitor'}`
     )}&body=${encodeURIComponent(
-      `Hello Mohan,\n\nName: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      `Hello Mohan,\n\nName: ${formData.name || ''}\nEmail: ${formData.email || ''}\n\nMessage:\n${formData.message || ''}`
     )}`;
-    window.location.href = mailtoUrl;
-    setIsSent(true);
-    setTimeout(() => setIsSent(false), 5000);
+    window.open(gmailUrl, '_blank');
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus(null);
+
+    try {
+      // POST directly to FormSubmit backend API
+      const response = await fetch("https://formsubmit.co/ajax/mohan.shankar62892@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          _subject: formData.subject || `Portfolio Inquiry from ${formData.name}`,
+          message: formData.message,
+          _template: "table",
+          _captcha: "false"
+        })
+      });
+
+      const data = await response.json();
+
+      if (response.ok && (data.success === "true" || data.success === true || data.message)) {
+        setStatus({
+          type: 'success',
+          message: 'Message delivered directly to Mohan’s inbox! Thank you, I will reply shortly.'
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setStatus({
+          type: 'fallback',
+          message: 'Click below to dispatch directly via Gmail web or your mail client.'
+        });
+      }
+    } catch (err) {
+      setStatus({
+        type: 'fallback',
+        message: 'Network error with automatic dispatch. Click below to send directly via Gmail.'
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -107,18 +153,28 @@ export default function Contact() {
                     <Mail size={16} className="text-cyan-400" />
                     <span>Email Address</span>
                   </div>
-                  <button
-                    onClick={handleCopyEmail}
-                    className="p-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-cyan-300 text-xs flex items-center gap-1 transition-colors"
-                    title="Copy Email"
-                  >
-                    {copiedEmail ? <Check size={14} className="text-emerald-400" /> : <Copy size={14} />}
-                    <span className="text-[10px]">{copiedEmail ? "Copied!" : "Copy"}</span>
-                  </button>
+                  <div className="flex items-center gap-1.5">
+                    <button
+                      onClick={handleCopyEmail}
+                      className="p-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-cyan-300 text-xs flex items-center gap-1 transition-colors"
+                      title="Copy Email"
+                    >
+                      {copiedEmail ? <Check size={14} className="text-emerald-400" /> : <Copy size={14} />}
+                      <span className="text-[10px]">{copiedEmail ? "Copied!" : "Copy"}</span>
+                    </button>
+                    <button
+                      onClick={openGmailCompose}
+                      className="p-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-cyan-300 text-xs flex items-center gap-1 transition-colors"
+                      title="Open in Gmail"
+                    >
+                      <ExternalLink size={13} className="text-cyan-400" />
+                      <span className="text-[10px]">Gmail</span>
+                    </button>
+                  </div>
                 </div>
                 <a
                   href={`mailto:${personalInfo.email}`}
-                  className="text-sm font-semibold text-white hover:text-cyan-300 transition-colors block break-all"
+                  className="text-sm font-semibold text-white hover:text-cyan-300 transition-colors block break-all font-mono"
                 >
                   {personalInfo.email}
                 </a>
@@ -198,7 +254,7 @@ export default function Contact() {
                   Send a Direct Message
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-400 mt-1">
-                  Fill out the form below to initiate an email conversation directly.
+                  Fill out the form below to deliver an inquiry directly to Mohan's inbox.
                 </p>
               </div>
 
@@ -252,18 +308,59 @@ export default function Contact() {
                   ></textarea>
                 </div>
 
-                <button
-                  type="submit"
-                  className="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-semibold text-white bg-gradient-to-r from-cyan-600 via-sky-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 shadow-lg shadow-cyan-600/25 transition-all hover:scale-[1.01] active:scale-[0.99] text-sm"
-                >
-                  <Send size={16} />
-                  <span>Send Message via Email</span>
-                </button>
+                <div className="flex flex-col sm:flex-row gap-3 pt-1">
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="flex-1 flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-semibold text-white bg-gradient-to-r from-cyan-600 via-sky-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 shadow-lg shadow-cyan-600/25 transition-all hover:scale-[1.01] active:scale-[0.99] text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {loading ? (
+                      <>
+                        <Loader2 size={16} className="animate-spin" />
+                        <span>Delivering to Inbox...</span>
+                      </>
+                    ) : (
+                      <>
+                        <Send size={16} />
+                        <span>Send Message</span>
+                      </>
+                    )}
+                  </button>
 
-                {isSent && (
-                  <div className="p-3 rounded-xl bg-emerald-950/60 border border-emerald-500/40 text-emerald-300 text-xs flex items-center gap-2">
-                    <Check size={16} />
-                    <span>Opening your mail client to dispatch your message. Thank you!</span>
+                  <button
+                    type="button"
+                    onClick={openGmailCompose}
+                    className="px-5 py-3.5 rounded-xl border border-slate-700 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm flex items-center justify-center gap-2 transition-all hover:border-cyan-500/50"
+                  >
+                    <ExternalLink size={16} className="text-cyan-400" />
+                    <span>Open in Gmail</span>
+                  </button>
+                </div>
+
+                {status && status.type === 'success' && (
+                  <div className="p-4 rounded-xl bg-emerald-950/70 border border-emerald-500/50 text-emerald-300 text-xs flex items-start gap-3">
+                    <Check size={18} className="shrink-0 mt-0.5 text-emerald-400" />
+                    <div>
+                      <div className="font-bold">{status.message}</div>
+                      <div className="text-[11px] text-emerald-400/80 mt-0.5">Check your inbox or spam folder if this was your first test submission.</div>
+                    </div>
+                  </div>
+                )}
+
+                {status && status.type === 'fallback' && (
+                  <div className="p-4 rounded-xl bg-blue-950/70 border border-blue-500/50 text-blue-200 text-xs space-y-2">
+                    <div className="flex items-center gap-2 font-semibold">
+                      <AlertCircle size={16} className="text-cyan-400" />
+                      <span>{status.message}</span>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={openGmailCompose}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-xs transition-colors"
+                    >
+                      <ExternalLink size={13} />
+                      <span>Open in Gmail Web Now</span>
+                    </button>
                   </div>
                 )}
               </form>
@@ -277,4 +374,3 @@ export default function Contact() {
     </section>
   );
 }
-
