@@ -163,9 +163,9 @@ export default function ResumeModal({ isOpen, onClose }) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {projectsData.map((proj) => (
                 <div key={proj.id} className="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2 text-xs">
-                  <div className="flex justify-between items-center">
+                  <div className="flex justify-between items-center gap-2">
                     <span className="font-bold text-white">{proj.title.split('—')[0]}</span>
-                    <span className="font-mono text-slate-400 text-[10px]">{proj.period}</span>
+                    <span className="font-mono text-cyan-400 text-[10px] shrink-0">{proj.badge}</span>
                   </div>
                   <p className="text-slate-300 leading-relaxed">
                     {proj.description}

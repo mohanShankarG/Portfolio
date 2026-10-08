@@ -146,6 +146,8 @@ export const experienceData = [
       "Working on the GujMarg Project, a Gujarat Government initiative for road safety and complaint management.",
       "Developed complaint management modules, automated officer assignment, and hierarchical escalation tracking up to the CMO (Chief Minister's Office).",
       "Contributed to both backend development using Node.js and Express.js and frontend development using React.js.",
+      "Worked on the Road Furniture Asset Detection System using YOLOv11 deep learning models to identify, catalog, and locate highway safety assets (guard rails, signage, kilometer stones).",
+      "Engineered asynchronous batch inference pipelines using Redis task queues, chainage-based spatial deduplication, and PostgreSQL/Prisma ORM.",
       "Worked on AI/ML-based Vehicle Detection systems using the BoT-SORT algorithm for object tracking.",
       "Performed data annotation using LabelImg and Label Studio for deep learning models.",
       "Built vehicle detection and tracking pipelines using Python and computer vision techniques.",
@@ -254,14 +256,15 @@ export const projectsData = [
   {
     id: "nirupaa",
     title: "Nirupaa -- Fashion E-Commerce Platform",
-    subtitle: "Full-Stack Retail Application for Men's and Women's Clothing",
+    subtitle: "Self-Developed Full-Stack Retail Platform for Men's & Women's Clothing",
     category: "Full Stack Web",
-    badge: "Full Stack MERN",
+    badge: "Own Project • Self-Developed",
     period: "2024 -- Present",
-    client: "E-Commerce / Commercial",
+    client: "Own Project (Self-Developed)",
     description:
-      "A scalable fashion e-commerce platform for men's and women's clothing. Offers seamless catalog browsing, dynamic price filtering, cart state management, secure checkout flows, and a dedicated admin portal for product and order lifecycle management.",
+      "A scalable fashion e-commerce platform for men's and women's clothing. It is my own personal project, developed independently end-to-end by myself. Offers seamless catalog browsing, dynamic price filtering, cart state management, secure checkout flows, and a dedicated admin portal for product and order lifecycle management.",
     features: [
+      "Own Project / Self-Developed: It's my own personal project, independently conceptualized, architected, and developing the platform myself end-to-end.",
       "Modern responsive React storefront with product browsing, filtering, cart, and checkout",
       "Implemented secure JWT-based authentication and admin dashboard",
       "Backend Skills: Node.js, Express.js, REST APIs, JWT Authentication, and RBAC",
@@ -269,6 +272,7 @@ export const projectsData = [
       "Production deployment architecture running frontend and backend on Vercel"
     ],
     architecture: {
+      ownership: "Own Project (Self-Developed Independently)",
       frontend: "React.js, Tailwind CSS, Responsive Cart State, Admin Dashboard",
       backend: "Node.js, Express.js, REST APIs, JWT Authentication, RBAC",
       security: "JWT Authentication, Role-Based Access Control (RBAC)",
@@ -278,8 +282,8 @@ export const projectsData = [
     },
     tech: ["React.js", "Node.js", "Express.js", "REST APIs", "JWT", "RBAC", "MongoDB Atlas", "Cloudinary", "Multer", "Sharp", "Vercel"],
     metrics: [
+      { label: "Project Ownership", val: "Own Project (Self-Developed)" },
       { label: "Auth & Security", val: "JWT & RBAC" },
-      { label: "Backend", val: "Node & Express APIs" },
       { label: "Deployment", val: "Vercel" }
     ],
     color: "from-purple-600 to-pink-600"
@@ -531,8 +535,8 @@ export const systemPipelines = [
   },
   {
     id: "nirupaa-flow",
-    title: "Nirupaa E-Commerce Order & Media Pipeline",
-    description: "Full-stack fashion retail lifecycle: product catalog, JWT auth, cart checkout, and automated Sharp/Cloudinary media compression.",
+    title: "Nirupaa E-Commerce Order & Media Pipeline (Self-Developed)",
+    description: "Full-stack self-developed fashion retail platform: product catalog, JWT auth & RBAC, cart checkout, and automated Sharp/Cloudinary media compression.",
     steps: [
       {
         step: "01",
