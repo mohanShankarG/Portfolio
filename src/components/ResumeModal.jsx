@@ -198,7 +198,7 @@ export default function ResumeModal({ isOpen, onClose }) {
                 <strong className="text-white">Backend Technologies:</strong> Node.js, Express.js, RESTful APIs, JWT Authentication, Serverless Functions, Cron Jobs, RBAC
               </div>
               <div>
-                <strong className="text-white">Databases & Enterprise Data:</strong> MongoDB Atlas, PostgreSQL, SAP HANA, Oracle DB, MySQL, Redis
+                <strong className="text-white">Databases & Enterprise Data:</strong> MongoDB Atlas, PostgreSQL, MySQL, Redis
               </div>
               <div>
                 <strong className="text-white">AI/ML & Computer Vision:</strong> Python, YOLOv8, YOLOv11, BoT-SORT, OpenCV, Object Detection, Tracking, LabelImg, Label Studio
@@ -207,7 +207,7 @@ export default function ResumeModal({ isOpen, onClose }) {
                 <strong className="text-white">Cloud & Deployment:</strong> Vercel, Cloudinary, Render
               </div>
               <div>
-                <strong className="text-white">Enterprise Tools & Middleware:</strong> SAP Integration Suite (CPI), SAP JCo, MuleSoft, SOAMANAGER, SAP GUI (SE37, WE20/WE21, SPROXY), Salesforce LWC, VS Code, Postman, Git, GitHub, Prisma ORM
+                <strong className="text-white">Enterprise Tools & Middleware:</strong> SAP Integration Suite (CPI), SAP GUI (SPROXY, BD64), JavaScript LWC, VS Code, Postman, Git, GitHub, Prisma ORM
               </div>
               <div>
                 <strong className="text-white">Embedded Systems, Robotics & Healthcare IoT:</strong> Raspberry Pi 5 & 4, ROS, WhatsApp Bot, Telegram Bot API, LiDAR SLAM, MAX30102 (SpO2/Pulse), DHT22, MPU6050 IMU, MQTT, Speech Processing (TTS), IR/Ultrasonic Sensors, Auto-Stop Safety
