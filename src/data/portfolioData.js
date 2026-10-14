@@ -156,20 +156,20 @@ export const experienceData = [
     tech: ["React.js", "Node.js", "Express.js", "PostgreSQL", "Python", "YOLOv11", "BoT-SORT", "Redis", "Cron Jobs", "RBAC"]
   },
   {
-    role: "Backend & SAP Integration Developer",
+    role: "Full Stack & SAP ABAP Integration Developer",
     company: "Synozon Technology",
     location: "India",
     period: "Aug 2023 -- Oct 2024",
     type: "Internship",
     highlights: [
-      "Engineered an enterprise-grade CRM engine for complex customer interaction tracking, account hierarchy management, and real-time backend synchronization.",
-      "Built a high-throughput integration layer connecting front-end CRM platforms with core enterprise backend services, automating business partners, sales orders, and credit limits.",
-      "Exposed legacy ABAP database tables into secure REST/SOAP web services using middleware (SAP CPI), reducing end-to-end data latency from hours to real-time.",
+      "Engineered an enterprise-grade full-stack CRM engine using React.js, Node.js, Express.js, and JavaScript for customer interaction tracking and real-time backend synchronization.",
+      "Built high-throughput REST APIs and an SAP ABAP Integration layer linking front-end CRM workflows with enterprise backend services.",
+      "Exposed legacy ABAP database tables into secure REST/SOAP web services using middleware, reducing end-to-end data latency from hours to real-time.",
       "Developed custom ABAP Remote Function Calls (RFCs) and User Exits/BAdIs for transaction processing.",
-      "Wrote custom JavaScript controllers, triggers, and Lightning Web Components (LWC) for event-driven API calls, reducing manual data-entry errors by 40% and delivering a unified 360° customer view.",
-      "Managed multi-tier data persistence across MongoDB Atlas with Postman test suites, VS Code, and OAuth 2.0 API security."
+      "Managed multi-tier data persistence and visual query profiling across MongoDB Atlas and MongoDB Compass, automating business partner data flows and reducing manual data-entry errors by 40%.",
+      "Created comprehensive Postman API test collections and OAuth 2.0 security workflows for robust, end-to-end delivery."
     ],
-    tech: ["ABAP", "SAP CPI", "JavaScript / LWC", "MongoDB Atlas", "Postman", "VS Code", "OAuth 2.0"]
+    tech: ["Node.js", "React.js", "Express.js", "JavaScript", "Postman", "REST APIs", "MongoDB Atlas", "MongoDB Compass", "SAP ABAP Integration", "OAuth 2.0"]
   },
   {
     role: "Embedded Developer / Jr. Software Engineer",
@@ -321,43 +321,46 @@ export const projectsData = [
   {
     id: "crm-system",
     title: "CRM -- Customer Relationship Management",
-    subtitle: "Enterprise CRM Engine & Real-Time Cloud Integration Layer",
+    subtitle: "Full-Stack CRM (React.js, Node.js, Express.js) & SAP ABAP Integration",
     category: "Full Stack Web",
-    badge: "Enterprise CRM & Cloud Integration",
+    badge: "Full-Stack CRM & SAP ABAP Integration",
     period: "2023 -- 2024",
     client: "Synozon Technology",
     description:
-      "Designed and implemented a full-stack, enterprise-grade Customer Relationship Management (CRM) engine tailored for complex customer interaction tracking, account hierarchy management, and real-time backend synchronization. Engineered a high-throughput integration layer linking the front-end CRM platform with core enterprise backend services. The solution automates data flows for business partners, sales order pipelines, and account financial limits, effectively eliminating cross-department data silos, reducing manual data-entry errors by 40%, and delivering a unified 360-degree customer view for sales and support operations.",
+      "Designed and implemented a full-stack, enterprise-grade Customer Relationship Management (CRM) engine built with React.js, Node.js, Express.js, and JavaScript, tailored for customer interaction tracking, account hierarchy management, and real-time backend synchronization. Engineered a high-throughput REST API integration layer linking the front-end CRM platform with SAP ABAP Integration services. Integrated MongoDB Atlas and MongoDB Compass for multi-tier data persistence, automating data flows for business partners, sales order pipelines, and account financial limits, effectively eliminating cross-department data silos, reducing manual data-entry errors by 40%, and delivering a unified 360-degree customer view for sales and support operations.",
     features: [
-      "Exposed legacy ABAP database tables into secure REST/SOAP web services using middleware, reducing end-to-end data latency from hours to real-time.",
-      "Engineered a high-throughput integration layer linking the front-end CRM platform with core enterprise backend services.",
-      "Automated critical data flows for business partners, sales order pipelines, and account financial credit limits.",
+      "Engineered responsive front-end customer interaction modules and event-driven interfaces using React.js, JavaScript, and custom controllers.",
+      "Built high-performance backend microservices and REST APIs using Node.js and Express.js for account hierarchy and pipeline management.",
+      "Exposed legacy ABAP database tables into secure REST/SOAP web services using SAP ABAP Integration and middleware, reducing end-to-end data latency from hours to real-time.",
+      "Automated critical data flows for business partners, sales order pipelines, and account financial credit limits with comprehensive Postman test collections.",
       "Developed custom Remote Function Calls (RFCs) and User Exits/BAdIs for transaction processing in ABAP.",
-      "Wrote custom JavaScript controllers, triggers, and Lightning Web Components (LWC) for advanced front-end customer interaction tracking and event-driven API calls.",
-      "Integrated SAP Integration Suite (Cloud Platform Integration - CPI) with comprehensive Postman test collections.",
+      "Managed multi-tier data persistence and visual query profiling across MongoDB Atlas and MongoDB Compass with secure API gateways and OAuth 2.0.",
       "Leveraged SAP GUI customizing tools and Transaction Codes including SPROXY and BD64.",
-      "Eliminated cross-department data silos and reduced manual data-entry errors by 40%, delivering a unified 360-degree customer view for sales and support operations.",
-      "Managed multi-tier data persistence across MongoDB Atlas with secure API gateways and OAuth 2.0 identity providers."
+      "Eliminated cross-department data silos and reduced manual data-entry errors by 40%, delivering a unified 360-degree customer view for sales and support operations."
     ],
     architecture: {
-      crmPlatforms: "Enterprise Customer Experience (CX) Suite",
-      middleware: "SAP Integration Suite (CPI), Postman",
-      sapCustomizing: "SAP GUI, Transaction Codes (SPROXY, BD64)",
-      databaseInfra: "MongoDB Atlas, Secure API Gateways, OAuth 2.0 Identity Providers",
-      languages: "ABAP (RFCs, User Exits/BAdIs) & JavaScript (LWC, Controllers, Triggers)"
+      frontend: "React.js, JavaScript, Responsive UI Controllers",
+      backend: "Node.js, Express.js, REST APIs",
+      integration: "SAP ABAP Integration, RFCs, SPROXY, BD64",
+      databaseInfra: "MongoDB Atlas, MongoDB Compass, Secure API Gateways",
+      apiTesting: "Postman API Collections, OAuth 2.0 Identity Providers"
     },
     tech: [
-      "ABAP",
-      "SAP Integration Suite (CPI)",
-      "JavaScript (LWC)",
-      "MongoDB Atlas",
+      "Node.js",
+      "React.js",
+      "Express.js",
+      "JavaScript",
       "Postman",
+      "REST APIs",
+      "MongoDB Atlas",
+      "MongoDB Compass",
+      "SAP ABAP Integration",
       "OAuth 2.0"
     ],
     metrics: [
       { label: "Data Latency", val: "Hours to Real-Time" },
       { label: "Manual Data Errors", val: "Reduced by 40%" },
-      { label: "Integration Layer", val: "SAP Integration Suite (CPI)" },
+      { label: "Backend Stack", val: "Node.js & Express.js" },
       { label: "Customer View", val: "Unified 360° View" }
     ],
     color: "from-sky-600 to-indigo-600"
@@ -588,33 +591,33 @@ export const systemPipelines = [
   },
   {
     id: "crm-flow",
-    title: "CRM Lifecycle & ABAP Integration Pipeline",
-    description: "Enterprise CRM engine linking front-end customer interaction platforms via SAP Integration Suite and secure middleware.",
+    title: "Full-Stack CRM & SAP ABAP Integration Pipeline",
+    description: "Enterprise CRM engine linking React.js frontend with Node.js/Express.js REST APIs, MongoDB Atlas/Compass, and SAP ABAP Integration.",
     steps: [
       {
         step: "01",
-        title: "Customer Interaction & LWC Event Intake",
-        desc: "Captures account interactions, business partner inquiries, and sales pipeline updates via custom JavaScript controllers and Lightning Web Components (LWC)."
+        title: "React.js & JavaScript Frontend Event Intake",
+        desc: "Captures account interactions, business partner inquiries, and sales pipeline updates via responsive React.js components and JavaScript controllers."
       },
       {
         step: "02",
-        title: "Middleware & API Gateway Orchestration",
-        desc: "SAP Integration Suite (CPI) authenticates requests using OAuth 2.0 and routes event-driven sales order payloads."
+        title: "Node.js & Express.js REST API Gateway",
+        desc: "Node.js and Express.js backend microservices authenticate requests using OAuth 2.0 and orchestrate event-driven sales order payloads."
       },
       {
         step: "03",
-        title: "REST & SOAP Web Service Exposure",
-        desc: "Exposes legacy ABAP database tables into secure REST/SOAP web services using enterprise middleware, reducing end-to-end data latency from hours to real-time."
+        title: "SAP ABAP Integration & Middleware",
+        desc: "Exposes and connects legacy ABAP tables and Remote Function Calls (RFCs, SPROXY, BD64) into secure REST/SOAP web services in real time."
       },
       {
         step: "04",
-        title: "Enterprise ABAP Processing (RFCs & User Exits)",
-        desc: "Executes enterprise business logic using custom Remote Function Calls (RFCs) and User Exits/BAdIs in ABAP."
+        title: "MongoDB Atlas & Compass Persistence",
+        desc: "Persists customer master data, interaction logs, and pipeline stages in MongoDB Atlas, visually audited and indexed using MongoDB Compass."
       },
       {
         step: "05",
-        title: "Unified 360° Data Sync (MongoDB Atlas & APIs)",
-        desc: "Synchronizes business partner master data, sales order pipelines, and account credit limits across MongoDB Atlas and secure API gateways—reducing manual errors by 40%."
+        title: "Postman Verification & 360° Customer View",
+        desc: "Automated Postman test collections validate end-to-end API payloads, reducing manual data-entry errors by 40% and delivering a unified 360° customer view."
       }
     ]
   },
